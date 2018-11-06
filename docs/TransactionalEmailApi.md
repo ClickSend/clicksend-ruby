@@ -1,4 +1,4 @@
-# SwaggerClient::TransactionalEmailApi
+# ClickSendClient::TransactionalEmailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,15 +20,15 @@ Export all Transactional Email history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TransactionalEmailApi.new
+api_instance = ClickSendClient::TransactionalEmailApi.new
 
 filename = 'filename_example' # String | Filename to download history as
 
@@ -41,7 +41,7 @@ begin
   #Export all Transactional Email history
   result = api_instance.email_history_export_get(filename, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling TransactionalEmailApi->email_history_export_get: #{e}"
 end
 ```
@@ -79,15 +79,15 @@ Get all transactional email history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TransactionalEmailApi.new
+api_instance = ClickSendClient::TransactionalEmailApi.new
 
 opts = { 
   date_from: 56, # Integer | Start date
@@ -100,7 +100,7 @@ begin
   #Get all transactional email history
   result = api_instance.email_history_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling TransactionalEmailApi->email_history_get: #{e}"
 end
 ```
@@ -139,24 +139,24 @@ Get transactional email price
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TransactionalEmailApi.new
+api_instance = ClickSendClient::TransactionalEmailApi.new
 
-email = SwaggerClient::Email.new # Email | Email model
+email = ClickSendClient::Email.new # Email | Email model
 
 
 begin
   #Get transactional email price
   result = api_instance.email_price_post(email)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling TransactionalEmailApi->email_price_post: #{e}"
 end
 ```
@@ -192,24 +192,24 @@ Send transactional email
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TransactionalEmailApi.new
+api_instance = ClickSendClient::TransactionalEmailApi.new
 
-email = SwaggerClient::Email.new # Email | Email model
+email = ClickSendClient::Email.new # Email | Email model
 
 
 begin
   #Send transactional email
   result = api_instance.email_send_post(email)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling TransactionalEmailApi->email_send_post: #{e}"
 end
 ```

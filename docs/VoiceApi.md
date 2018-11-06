@@ -1,4 +1,4 @@
-# SwaggerClient::VoiceApi
+# ClickSendClient::VoiceApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -24,21 +24,21 @@ Update all voice messages as cancelled
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
 begin
   #Update all voice messages as cancelled
   result = api_instance.voice_cancel_all_put
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_cancel_all_put: #{e}"
 end
 ```
@@ -71,15 +71,15 @@ Update voice message status as cancelled
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
 message_id = 'message_id_example' # String | Your voice message id
 
@@ -88,7 +88,7 @@ begin
   #Update voice message status as cancelled
   result = api_instance.voice_cancel_by_message_id_put(message_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_cancel_by_message_id_put: #{e}"
 end
 ```
@@ -124,15 +124,15 @@ Export voice history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
 filename = 'filename_example' # String | Filename to export to
 
@@ -141,7 +141,7 @@ begin
   #Export voice history
   result = api_instance.voice_history_export_get(filename)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_history_export_get: #{e}"
 end
 ```
@@ -177,15 +177,15 @@ Get all voice history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
 opts = { 
   date_from: 56, # Integer | Timestamp (from) used to show records by date.
@@ -198,7 +198,7 @@ begin
   #Get all voice history
   result = api_instance.voice_history_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_history_get: #{e}"
 end
 ```
@@ -237,21 +237,21 @@ Get all voice languages
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
 begin
   #Get all voice languages
   result = api_instance.voice_lang_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_lang_get: #{e}"
 end
 ```
@@ -284,24 +284,24 @@ Calculate voice price
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
-voice_messages = SwaggerClient::VoiceMessageCollection.new # VoiceMessageCollection | VoiceMessageCollection model
+voice_messages = ClickSendClient::VoiceMessageCollection.new # VoiceMessageCollection | VoiceMessageCollection model
 
 
 begin
   #Calculate voice price
   result = api_instance.voice_price_post(voice_messages)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_price_post: #{e}"
 end
 ```
@@ -337,15 +337,15 @@ Get all voice receipts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -356,7 +356,7 @@ begin
   #Get all voice receipts
   result = api_instance.voice_receipts_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_receipts_get: #{e}"
 end
 ```
@@ -393,24 +393,24 @@ Send a voice call
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::VoiceApi.new
+api_instance = ClickSendClient::VoiceApi.new
 
-voice_messages = SwaggerClient::VoiceMessageCollection.new # VoiceMessageCollection | VoiceMessageCollection model
+voice_messages = ClickSendClient::VoiceMessageCollection.new # VoiceMessageCollection | VoiceMessageCollection model
 
 
 begin
   #Send voice message(s)
   result = api_instance.voice_send_post(voice_messages)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_send_post: #{e}"
 end
 ```

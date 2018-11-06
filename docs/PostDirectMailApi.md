@@ -1,4 +1,4 @@
-# SwaggerClient::PostDirectMailApi
+# ClickSendClient::PostDirectMailApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,15 +20,15 @@ Get direct mail campaigns
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostDirectMailApi.new
+api_instance = ClickSendClient::PostDirectMailApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -39,7 +39,7 @@ begin
   #Get direct mail campaigns
   result = api_instance.post_direct_mail_campaigns_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostDirectMailApi->post_direct_mail_campaigns_get: #{e}"
 end
 ```
@@ -76,24 +76,24 @@ Calculate direct mail campaign price
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostDirectMailApi.new
+api_instance = ClickSendClient::PostDirectMailApi.new
 
-post_direct_mail = SwaggerClient::PostDirectMail.new # PostDirectMail | PostDirectMail model
+post_direct_mail = ClickSendClient::PostDirectMail.new # PostDirectMail | PostDirectMail model
 
 
 begin
   #Calculate direct mail campaign price
   result = api_instance.post_direct_mail_campaigns_price_post(post_direct_mail)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostDirectMailApi->post_direct_mail_campaigns_price_post: #{e}"
 end
 ```
@@ -129,24 +129,24 @@ Send direct mail campaign
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostDirectMailApi.new
+api_instance = ClickSendClient::PostDirectMailApi.new
 
-post_direct_mail = SwaggerClient::PostDirectMail.new # PostDirectMail | PostDirectMail model
+post_direct_mail = ClickSendClient::PostDirectMail.new # PostDirectMail | PostDirectMail model
 
 
 begin
   #Send direct mail campaign
   result = api_instance.post_direct_mail_campaigns_send_post(post_direct_mail)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostDirectMailApi->post_direct_mail_campaigns_send_post: #{e}"
 end
 ```
@@ -182,15 +182,15 @@ Search for a location
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostDirectMailApi.new
+api_instance = ClickSendClient::PostDirectMailApi.new
 
 country = 'country_example' # String | Country Code to search
 
@@ -205,7 +205,7 @@ begin
   #Search for a location
   result = api_instance.post_direct_mail_locations_search_by_country_get(country, q, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostDirectMailApi->post_direct_mail_locations_search_by_country_get: #{e}"
 end
 ```

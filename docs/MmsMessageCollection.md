@@ -1,4 +1,4 @@
-# SwaggerClient::MmsMessageCollection
+# ClickSendClient::MmsMessageCollection
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::Attachment
+# ClickSendClient::Attachment
 
 ## Properties
 Name | Type | Description | Notes

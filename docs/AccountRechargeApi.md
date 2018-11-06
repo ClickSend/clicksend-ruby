@@ -1,4 +1,4 @@
-# SwaggerClient::AccountRechargeApi
+# ClickSendClient::AccountRechargeApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,21 +22,21 @@ Get Credit Card info
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountRechargeApi.new
+api_instance = ClickSendClient::AccountRechargeApi.new
 
 begin
   #Get Credit Card info
   result = api_instance.recharge_credit_card_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountRechargeApi->recharge_credit_card_get: #{e}"
 end
 ```
@@ -69,24 +69,24 @@ Update credit card info
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountRechargeApi.new
+api_instance = ClickSendClient::AccountRechargeApi.new
 
-credit_card = SwaggerClient::CreditCard.new # CreditCard | CreditCard model
+credit_card = ClickSendClient::CreditCard.new # CreditCard | CreditCard model
 
 
 begin
   #Update credit card info
   result = api_instance.recharge_credit_card_put(credit_card)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountRechargeApi->recharge_credit_card_put: #{e}"
 end
 ```
@@ -122,15 +122,15 @@ Get list of all packages
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountRechargeApi.new
+api_instance = ClickSendClient::AccountRechargeApi.new
 
 opts = { 
   country: 'country_example' # String | Country code
@@ -140,7 +140,7 @@ begin
   #Get list of all packages
   result = api_instance.recharge_packages_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountRechargeApi->recharge_packages_get: #{e}"
 end
 ```
@@ -176,15 +176,15 @@ Purchase a package
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountRechargeApi.new
+api_instance = ClickSendClient::AccountRechargeApi.new
 
 package_id = 56 # Integer | ID of package to purchase
 
@@ -193,7 +193,7 @@ begin
   #Purchase a package
   result = api_instance.recharge_purchase_by_package_id_put(package_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountRechargeApi->recharge_purchase_by_package_id_put: #{e}"
 end
 ```
@@ -229,15 +229,15 @@ Get specific Transaction
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountRechargeApi.new
+api_instance = ClickSendClient::AccountRechargeApi.new
 
 transaction_id = 'transaction_id_example' # String | ID of transaction to retrieve
 
@@ -246,7 +246,7 @@ begin
   #Get specific Transaction
   result = api_instance.recharge_transactions_by_transaction_id_get(transaction_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountRechargeApi->recharge_transactions_by_transaction_id_get: #{e}"
 end
 ```
@@ -282,15 +282,15 @@ Get all transactions
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountRechargeApi.new
+api_instance = ClickSendClient::AccountRechargeApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -301,7 +301,7 @@ begin
   #Purchase a package
   result = api_instance.recharge_transactions_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountRechargeApi->recharge_transactions_get: #{e}"
 end
 ```

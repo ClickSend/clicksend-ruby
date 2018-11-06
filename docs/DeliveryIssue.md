@@ -1,4 +1,4 @@
-# SwaggerClient::DeliveryIssue
+# ClickSendClient::DeliveryIssue
 
 ## Properties
 Name | Type | Description | Notes

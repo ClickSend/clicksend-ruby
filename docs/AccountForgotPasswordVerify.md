@@ -1,4 +1,4 @@
-# SwaggerClient::AccountForgotPasswordVerify
+# ClickSendClient::AccountForgotPasswordVerify
 
 ## Properties
 Name | Type | Description | Notes

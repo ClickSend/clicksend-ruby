@@ -1,4 +1,4 @@
-# SwaggerClient::CountriesApi
+# ClickSendClient::CountriesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -17,15 +17,15 @@ Get all countries
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 
-api_instance = SwaggerClient::CountriesApi.new
+api_instance = ClickSendClient::CountriesApi.new
 
 begin
   #Get all country codes
   result = api_instance.countries_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling CountriesApi->countries_get: #{e}"
 end
 ```

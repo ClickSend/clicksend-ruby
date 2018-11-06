@@ -1,4 +1,4 @@
-# SwaggerClient::SMSApi
+# ClickSendClient::SMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -33,21 +33,21 @@ Update all scheduled message as cancelled
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 begin
   #Update all scheduled message as cancelled
   result = api_instance.sms_cancel_all_put
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_cancel_all_put: #{e}"
 end
 ```
@@ -80,15 +80,15 @@ Update scheduled message as cancelled
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 message_id = 'message_id_example' # String | The message ID you want to cancel
 
@@ -97,7 +97,7 @@ begin
   #Update scheduled message as cancelled
   result = api_instance.sms_cancel_by_message_id_put(message_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_cancel_by_message_id_put: #{e}"
 end
 ```
@@ -133,15 +133,15 @@ Export all sms history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 filename = 'filename_example' # String | Filename to download history as
 
@@ -150,7 +150,7 @@ begin
   #Export all sms history
   result = api_instance.sms_history_export_get(filename)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_history_export_get: #{e}"
 end
 ```
@@ -186,15 +186,15 @@ Get all sms history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
   date_from: 56, # Integer | Start date
@@ -207,7 +207,7 @@ begin
   #Get all sms history
   result = api_instance.sms_history_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_history_get: #{e}"
 end
 ```
@@ -246,15 +246,15 @@ Get all inbound sms
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -265,7 +265,7 @@ begin
   #Get all inbound sms
   result = api_instance.sms_inbound_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_inbound_get: #{e}"
 end
 ```
@@ -302,15 +302,15 @@ Create inbound sms
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 url = 'url_example' # String | Your url
 
@@ -319,7 +319,7 @@ begin
   #Create inbound sms
   result = api_instance.sms_inbound_post(url)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_inbound_post: #{e}"
 end
 ```
@@ -355,15 +355,15 @@ Mark all inbound SMS as read optionally before a certain date
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
   date_before: 'date_before_example' # String | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
@@ -373,7 +373,7 @@ begin
   #Mark inbound SMS as read
   result = api_instance.sms_inbound_read_put(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_inbound_read_put: #{e}"
 end
 ```
@@ -409,24 +409,24 @@ Calculate sms price
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
-sms_messages = SwaggerClient::SmsMessageCollection.new # SmsMessageCollection | SmsMessageCollection model
+sms_messages = ClickSendClient::SmsMessageCollection.new # SmsMessageCollection | SmsMessageCollection model
 
 
 begin
   #Calculate sms price
   result = api_instance.sms_price_post(sms_messages)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_price_post: #{e}"
 end
 ```
@@ -462,15 +462,15 @@ Get a Specific Delivery Receipt
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 message_id = 'message_id_example' # String | Message ID
 
@@ -479,7 +479,7 @@ begin
   #Get a Specific Delivery Receipt
   result = api_instance.sms_receipts_by_message_id_get(message_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_receipts_by_message_id_get: #{e}"
 end
 ```
@@ -515,15 +515,15 @@ Get all delivery receipts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -534,7 +534,7 @@ begin
   #Get all delivery receipts
   result = api_instance.sms_receipts_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_receipts_get: #{e}"
 end
 ```
@@ -571,15 +571,15 @@ Add a delivery receipt
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 url = 'url_example' # String | Your url
 
@@ -588,7 +588,7 @@ begin
   #Add a delivery receipt
   result = api_instance.sms_receipts_post(url)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_receipts_post: #{e}"
 end
 ```
@@ -624,15 +624,15 @@ Mark delivery receipts as read
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
   date_before: 'date_before_example' # String | Mark all as read before this timestamp
@@ -642,7 +642,7 @@ begin
   #Mark delivery receipts as read
   result = api_instance.sms_receipts_read_put(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_receipts_read_put: #{e}"
 end
 ```
@@ -678,24 +678,24 @@ Send sms message(s)
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
-sms_messages = SwaggerClient::SmsMessageCollection.new # SmsMessageCollection | SmsMessageCollection model
+sms_messages = ClickSendClient::SmsMessageCollection.new # SmsMessageCollection | SmsMessageCollection model
 
 
 begin
   #Send sms message(s)
   result = api_instance.sms_send_post(sms_messages)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_send_post: #{e}"
 end
 ```
@@ -731,15 +731,15 @@ Delete sms template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 template_id = 56 # Integer | Template id
 
@@ -748,7 +748,7 @@ begin
   #Delete sms template
   result = api_instance.sms_templates_by_template_id_delete(template_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_templates_by_template_id_delete: #{e}"
 end
 ```
@@ -784,26 +784,26 @@ Update sms template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 template_id = 56 # Integer | Template id
 
-sms_template = SwaggerClient::SmsTemplate.new # SmsTemplate | Template item
+sms_template = ClickSendClient::SmsTemplate.new # SmsTemplate | Template item
 
 
 begin
   #Update sms template
   result = api_instance.sms_templates_by_template_id_put(template_id, sms_template)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_templates_by_template_id_put: #{e}"
 end
 ```
@@ -840,15 +840,15 @@ Get lists of all sms templates
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -859,7 +859,7 @@ begin
   #Get lists of all sms templates
   result = api_instance.sms_templates_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_templates_get: #{e}"
 end
 ```
@@ -896,24 +896,24 @@ Create sms template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SMSApi.new
+api_instance = ClickSendClient::SMSApi.new
 
-sms_template = SwaggerClient::SmsTemplate.new # SmsTemplate | SmsTemplate model
+sms_template = ClickSendClient::SmsTemplate.new # SmsTemplate | SmsTemplate model
 
 
 begin
   #Create sms template
   result = api_instance.sms_templates_post(sms_template)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSApi->sms_templates_post: #{e}"
 end
 ```

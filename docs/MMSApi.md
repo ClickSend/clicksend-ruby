@@ -1,4 +1,4 @@
-# SwaggerClient::MMSApi
+# ClickSendClient::MMSApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -18,24 +18,24 @@ Get Price for MMS sent
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MMSApi.new
+api_instance = ClickSendClient::MMSApi.new
 
-mms_messages = SwaggerClient::MmsMessageCollection.new # MmsMessageCollection | MmsMessageCollection model
+mms_messages = ClickSendClient::MmsMessageCollection.new # MmsMessageCollection | MmsMessageCollection model
 
 
 begin
   #Get Price for MMS sent
   result = api_instance.mms_price_post(mms_messages)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MMSApi->mms_price_post: #{e}"
 end
 ```
@@ -71,24 +71,24 @@ Send MMS
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MMSApi.new
+api_instance = ClickSendClient::MMSApi.new
 
-mms_messages = SwaggerClient::MmsMessageCollection.new # MmsMessageCollection | MmsMessageCollection model
+mms_messages = ClickSendClient::MmsMessageCollection.new # MmsMessageCollection | MmsMessageCollection model
 
 
 begin
   #Send MMS
   result = api_instance.mms_send_post(mms_messages)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MMSApi->mms_send_post: #{e}"
 end
 ```

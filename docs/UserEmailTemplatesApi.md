@@ -1,4 +1,4 @@
-# SwaggerClient::UserEmailTemplatesApi
+# ClickSendClient::UserEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,15 +21,15 @@ Delete user email template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UserEmailTemplatesApi.new
+api_instance = ClickSendClient::UserEmailTemplatesApi.new
 
 template_id = 56 # Integer | Email template id
 
@@ -38,7 +38,7 @@ begin
   #Delete user email template
   result = api_instance.email_template_delete(template_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling UserEmailTemplatesApi->email_template_delete: #{e}"
 end
 ```
@@ -74,15 +74,15 @@ Get specific user email templates
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UserEmailTemplatesApi.new
+api_instance = ClickSendClient::UserEmailTemplatesApi.new
 
 template_id = 56 # Integer | Email template id
 
@@ -91,7 +91,7 @@ begin
   #Get specific user email template
   result = api_instance.email_template_get(template_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling UserEmailTemplatesApi->email_template_get: #{e}"
 end
 ```
@@ -127,24 +127,24 @@ Create email template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UserEmailTemplatesApi.new
+api_instance = ClickSendClient::UserEmailTemplatesApi.new
 
-email_template = SwaggerClient::EmailTemplateNew.new # EmailTemplateNew | Email template model
+email_template = ClickSendClient::EmailTemplateNew.new # EmailTemplateNew | Email template model
 
 
 begin
   #Create email template
   result = api_instance.email_template_post(email_template)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling UserEmailTemplatesApi->email_template_post: #{e}"
 end
 ```
@@ -180,26 +180,26 @@ Update email template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UserEmailTemplatesApi.new
+api_instance = ClickSendClient::UserEmailTemplatesApi.new
 
 template_id = 56 # Integer | Email template id
 
-email_template = SwaggerClient::EmailTemplateUpdate.new # EmailTemplateUpdate | Email template model
+email_template = ClickSendClient::EmailTemplateUpdate.new # EmailTemplateUpdate | Email template model
 
 
 begin
   #Update email template
   result = api_instance.email_template_put(template_id, email_template)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling UserEmailTemplatesApi->email_template_put: #{e}"
 end
 ```
@@ -236,15 +236,15 @@ Get all user email templates
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UserEmailTemplatesApi.new
+api_instance = ClickSendClient::UserEmailTemplatesApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -255,7 +255,7 @@ begin
   #Get all user email templates
   result = api_instance.email_templates_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling UserEmailTemplatesApi->email_templates_get: #{e}"
 end
 ```

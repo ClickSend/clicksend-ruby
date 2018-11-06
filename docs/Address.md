@@ -1,4 +1,4 @@
-# SwaggerClient::Address
+# ClickSendClient::Address
 
 ## Properties
 Name | Type | Description | Notes

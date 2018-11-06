@@ -1,4 +1,4 @@
-# SwaggerClient::Subaccount
+# ClickSendClient::Subaccount
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ResellerAccountTransferCredit
+# ClickSendClient::ResellerAccountTransferCredit
 
 ## Properties
 Name | Type | Description | Notes

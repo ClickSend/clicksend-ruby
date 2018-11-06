@@ -1,4 +1,4 @@
-# SwaggerClient::StatisticsApi
+# ClickSendClient::StatisticsApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -19,21 +19,21 @@ Get mms statistics
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::StatisticsApi.new
+api_instance = ClickSendClient::StatisticsApi.new
 
 begin
   #Get mms statistics
   result = api_instance.statistics_mms_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling StatisticsApi->statistics_mms_get: #{e}"
 end
 ```
@@ -66,21 +66,21 @@ Get sms statistics
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::StatisticsApi.new
+api_instance = ClickSendClient::StatisticsApi.new
 
 begin
   #Get sms statistics
   result = api_instance.statistics_sms_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling StatisticsApi->statistics_sms_get: #{e}"
 end
 ```
@@ -113,21 +113,21 @@ Get voice statistics
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::StatisticsApi.new
+api_instance = ClickSendClient::StatisticsApi.new
 
 begin
   #Get voice statistics
   result = api_instance.statistics_voice_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling StatisticsApi->statistics_voice_get: #{e}"
 end
 ```

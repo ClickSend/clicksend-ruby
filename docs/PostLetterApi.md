@@ -1,4 +1,4 @@
-# SwaggerClient::PostLetterApi
+# ClickSendClient::PostLetterApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,15 +20,15 @@ export post letter history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostLetterApi.new
+api_instance = ClickSendClient::PostLetterApi.new
 
 filename = 'filename_example' # String | Filename to export to
 
@@ -37,7 +37,7 @@ begin
   #export post letter history
   result = api_instance.post_letters_export_get(filename)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostLetterApi->post_letters_export_get: #{e}"
 end
 ```
@@ -73,15 +73,15 @@ Get all post letter history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostLetterApi.new
+api_instance = ClickSendClient::PostLetterApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -92,7 +92,7 @@ begin
   #Get all post letter history
   result = api_instance.post_letters_history_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostLetterApi->post_letters_history_get: #{e}"
 end
 ```
@@ -129,24 +129,24 @@ Calculate post letter price
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostLetterApi.new
+api_instance = ClickSendClient::PostLetterApi.new
 
-post_letter = SwaggerClient::PostLetter.new # PostLetter | PostLetter model
+post_letter = ClickSendClient::PostLetter.new # PostLetter | PostLetter model
 
 
 begin
   #Calculate post letter price
   result = api_instance.post_letters_price_post(post_letter)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostLetterApi->post_letters_price_post: #{e}"
 end
 ```
@@ -182,24 +182,24 @@ Send post letter
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostLetterApi.new
+api_instance = ClickSendClient::PostLetterApi.new
 
-post_letter = SwaggerClient::PostLetter.new # PostLetter | PostLetter model
+post_letter = ClickSendClient::PostLetter.new # PostLetter | PostLetter model
 
 
 begin
   #Send post letter
   result = api_instance.post_letters_send_post(post_letter)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostLetterApi->post_letters_send_post: #{e}"
 end
 ```

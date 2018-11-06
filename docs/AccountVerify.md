@@ -1,4 +1,4 @@
-# SwaggerClient::AccountVerify
+# ClickSendClient::AccountVerify
 
 ## Properties
 Name | Type | Description | Notes

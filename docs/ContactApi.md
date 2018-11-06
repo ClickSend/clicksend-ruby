@@ -1,4 +1,4 @@
-# SwaggerClient::ContactApi
+# ClickSendClient::ContactApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,15 +23,15 @@ Delete a contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
 list_id = 56 # Integer | List ID
 
@@ -42,7 +42,7 @@ begin
   #Delete a contact
   result = api_instance.lists_contacts_by_list_id_and_contact_id_delete(list_id, contact_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_contacts_by_list_id_and_contact_id_delete: #{e}"
 end
 ```
@@ -79,15 +79,15 @@ Get a specific contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
 list_id = 56 # Integer | Your contact list id you want to access.
 
@@ -98,7 +98,7 @@ begin
   #Get a specific contact
   result = api_instance.lists_contacts_by_list_id_and_contact_id_get(list_id, contact_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_contacts_by_list_id_and_contact_id_get: #{e}"
 end
 ```
@@ -135,28 +135,28 @@ Update specific contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
 list_id = 56 # Integer | Contact list id
 
 contact_id = 56 # Integer | Contact ID
 
-contact = SwaggerClient::Contact.new # Contact | Contact model
+contact = ClickSendClient::Contact.new # Contact | Contact model
 
 
 begin
   #Update specific contact
   result = api_instance.lists_contacts_by_list_id_and_contact_id_put(list_id, contact_id, contact)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_contacts_by_list_id_and_contact_id_put: #{e}"
 end
 ```
@@ -194,15 +194,15 @@ Get all contacts in a list
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
 list_id = 56 # Integer | Contact list ID
 
@@ -215,7 +215,7 @@ begin
   #Get all contacts in a list
   result = api_instance.lists_contacts_by_list_id_get(list_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_contacts_by_list_id_get: #{e}"
 end
 ```
@@ -253,17 +253,17 @@ Create new contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
-contact = SwaggerClient::Contact.new # Contact | Contact model
+contact = ClickSendClient::Contact.new # Contact | Contact model
 
 list_id = 56 # Integer | List id
 
@@ -276,7 +276,7 @@ begin
   #Create new contact
   result = api_instance.lists_contacts_by_list_id_post(contact, list_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_contacts_by_list_id_post: #{e}"
 end
 ```
@@ -315,15 +315,15 @@ Remove all opted out contacts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
 list_id = 56 # Integer | Your list id
 
@@ -334,7 +334,7 @@ begin
   #Remove all opted out contacts
   result = api_instance.lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put(list_id, opt_out_list_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put: #{e}"
 end
 ```
@@ -371,15 +371,15 @@ Transfer contact to another list
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ContactApi.new
+api_instance = ClickSendClient::ContactApi.new
 
 from_list_id = 56 # Integer | List ID for list that contains contact.
 
@@ -392,7 +392,7 @@ begin
   #Transfer contact to another list
   result = api_instance.lists_transfer_contact_put(from_list_id, contact_id, to_list_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_transfer_contact_put: #{e}"
 end
 ```

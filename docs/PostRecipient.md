@@ -1,4 +1,4 @@
-# SwaggerClient::PostRecipient
+# ClickSendClient::PostRecipient
 
 ## Properties
 Name | Type | Description | Notes

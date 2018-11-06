@@ -1,4 +1,4 @@
-# SwaggerClient::PostPostcard
+# ClickSendClient::PostPostcard
 
 ## Properties
 Name | Type | Description | Notes

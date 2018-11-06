@@ -1,4 +1,4 @@
-# SwaggerClient::PostPostcardApi
+# ClickSendClient::PostPostcardApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,15 +20,15 @@ Export postcard history to a CSV file
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostPostcardApi.new
+api_instance = ClickSendClient::PostPostcardApi.new
 
 filename = 'filename_example' # String | Filename to export to
 
@@ -37,7 +37,7 @@ begin
   #Export postcard history to a CSV file
   result = api_instance.post_postcards_history_export_get(filename)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostPostcardApi->post_postcards_history_export_get: #{e}"
 end
 ```
@@ -73,15 +73,15 @@ Retrieve the history of postcards sent or scheduled
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostPostcardApi.new
+api_instance = ClickSendClient::PostPostcardApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -92,7 +92,7 @@ begin
   #Retrieve the history of postcards sent or scheduled
   result = api_instance.post_postcards_history_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostPostcardApi->post_postcards_history_get: #{e}"
 end
 ```
@@ -129,24 +129,24 @@ Calculate price for sending one or more postcards
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostPostcardApi.new
+api_instance = ClickSendClient::PostPostcardApi.new
 
-post_postcards = SwaggerClient::PostPostcard.new # PostPostcard | PostPostcard model
+post_postcards = ClickSendClient::PostPostcard.new # PostPostcard | PostPostcard model
 
 
 begin
   #Calculate price for sending one or more postcards
   result = api_instance.post_postcards_price_post(post_postcards)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostPostcardApi->post_postcards_price_post: #{e}"
 end
 ```
@@ -182,24 +182,24 @@ Send one or more postcards
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostPostcardApi.new
+api_instance = ClickSendClient::PostPostcardApi.new
 
-post_postcards = SwaggerClient::PostPostcard.new # PostPostcard | PostPostcard model
+post_postcards = ClickSendClient::PostPostcard.new # PostPostcard | PostPostcard model
 
 
 begin
   #Send one or more postcards
   result = api_instance.post_postcards_send_post(post_postcards)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostPostcardApi->post_postcards_send_post: #{e}"
 end
 ```

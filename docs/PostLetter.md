@@ -1,4 +1,4 @@
-# SwaggerClient::PostLetter
+# ClickSendClient::PostLetter
 
 ## Properties
 Name | Type | Description | Notes

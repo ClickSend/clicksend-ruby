@@ -1,4 +1,4 @@
-# SwaggerClient::TimezonesApi
+# ClickSendClient::TimezonesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -17,15 +17,15 @@ Get supported list of timezones.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::TimezonesApi.new
+api_instance = ClickSendClient::TimezonesApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -36,7 +36,7 @@ begin
   #Get supported list of timezones.
   result = api_instance.timezones_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling TimezonesApi->timezones_get: #{e}"
 end
 ```

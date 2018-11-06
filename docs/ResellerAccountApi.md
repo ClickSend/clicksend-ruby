@@ -1,4 +1,4 @@
-# SwaggerClient::ResellerAccountApi
+# ClickSendClient::ResellerAccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -20,15 +20,15 @@ Get Reseller clients Account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ResellerAccountApi.new
+api_instance = ClickSendClient::ResellerAccountApi.new
 
 client_user_id = 56 # Integer | User ID of client
 
@@ -37,7 +37,7 @@ begin
   #Get Reseller clients Account
   result = api_instance.reseller_accounts_by_client_user_id_get(client_user_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ResellerAccountApi->reseller_accounts_by_client_user_id_get: #{e}"
 end
 ```
@@ -73,26 +73,26 @@ Update Reseller clients Account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ResellerAccountApi.new
+api_instance = ClickSendClient::ResellerAccountApi.new
 
 client_user_id = 56 # Integer | User ID of client
 
-reseller_account = SwaggerClient::ResellerAccount.new # ResellerAccount | ResellerAccount model
+reseller_account = ClickSendClient::ResellerAccount.new # ResellerAccount | ResellerAccount model
 
 
 begin
   #Update Reseller clients Account
   result = api_instance.reseller_accounts_by_client_user_id_put(client_user_id, reseller_account)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ResellerAccountApi->reseller_accounts_by_client_user_id_put: #{e}"
 end
 ```
@@ -129,15 +129,15 @@ Get list of reseller accounts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ResellerAccountApi.new
+api_instance = ClickSendClient::ResellerAccountApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -148,7 +148,7 @@ begin
   #Get list of reseller accounts
   result = api_instance.reseller_accounts_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ResellerAccountApi->reseller_accounts_get: #{e}"
 end
 ```
@@ -185,24 +185,24 @@ Create reseller account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ResellerAccountApi.new
+api_instance = ClickSendClient::ResellerAccountApi.new
 
-reseller_account = SwaggerClient::ResellerAccount.new # ResellerAccount | ResellerAccount model
+reseller_account = ClickSendClient::ResellerAccount.new # ResellerAccount | ResellerAccount model
 
 
 begin
   #Create reseller account
   result = api_instance.reseller_accounts_post(reseller_account)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ResellerAccountApi->reseller_accounts_post: #{e}"
 end
 ```

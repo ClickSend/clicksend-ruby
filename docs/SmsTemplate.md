@@ -1,4 +1,4 @@
-# SwaggerClient::SmsTemplate
+# ClickSendClient::SmsTemplate
 
 ## Properties
 Name | Type | Description | Notes

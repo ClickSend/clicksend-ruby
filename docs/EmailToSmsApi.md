@@ -1,4 +1,4 @@
-# SwaggerClient::EmailToSmsApi
+# ClickSendClient::EmailToSmsApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -23,15 +23,15 @@ Get list of email to sms allowed addresses
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -42,7 +42,7 @@ begin
   #Get list of email to sms allowed addresses
   result = api_instance.sms_email_sms_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_get: #{e}"
 end
 ```
@@ -79,24 +79,24 @@ Create email to sms allowed address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
-email_sms_address = SwaggerClient::EmailSMSAddress.new # EmailSMSAddress | EmailSMSAddress model
+email_sms_address = ClickSendClient::EmailSMSAddress.new # EmailSMSAddress | EmailSMSAddress model
 
 
 begin
   #Create email to sms allowed address
   result = api_instance.sms_email_sms_post(email_sms_address)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_post: #{e}"
 end
 ```
@@ -132,15 +132,15 @@ Delete email to sms stripped string rule
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
 rule_id = 56 # Integer | Your rule id
 
@@ -149,7 +149,7 @@ begin
   #Delete email to sms stripped string rule
   result = api_instance.sms_email_sms_stripped_string_delete(rule_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_delete: #{e}"
 end
 ```
@@ -185,15 +185,15 @@ Get email to sms stripped string rule
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
 rule_id = 56 # Integer | Your rule id
 
@@ -202,7 +202,7 @@ begin
   #Get email to sms stripped string rule
   result = api_instance.sms_email_sms_stripped_string_get(rule_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_get: #{e}"
 end
 ```
@@ -238,15 +238,15 @@ Create email to sms stripped string rules
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
 stripped_string = 'stripped_string_example' # String | String to be stripped.
 
@@ -255,7 +255,7 @@ begin
   #Create email to sms stripped string rule
   result = api_instance.sms_email_sms_stripped_string_post(stripped_string)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_post: #{e}"
 end
 ```
@@ -291,15 +291,15 @@ Update email to sms stripped string rule
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
 rule_id = 56 # Integer | Your rule id
 
@@ -310,7 +310,7 @@ begin
   #Update email to sms stripped string rule
   result = api_instance.sms_email_sms_stripped_string_put(rule_id, stripped_string)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_put: #{e}"
 end
 ```
@@ -347,15 +347,15 @@ Get list of email to sms stripped string rules
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailToSmsApi.new
+api_instance = ClickSendClient::EmailToSmsApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -366,7 +366,7 @@ begin
   #Get list of email to sms stripped string rules
   result = api_instance.sms_email_sms_stripped_strings_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_stripped_strings_get: #{e}"
 end
 ```

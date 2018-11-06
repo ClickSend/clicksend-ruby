@@ -1,4 +1,4 @@
-# SwaggerClient::FaxApi
+# ClickSendClient::FaxApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,15 +21,15 @@ Get a list of Fax History.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FaxApi.new
+api_instance = ClickSendClient::FaxApi.new
 
 opts = { 
   date_from: 56, # Integer | Customize result by setting from date (timestsamp) Example: 1457572619.
@@ -44,7 +44,7 @@ begin
   #Get a list of Fax History.
   result = api_instance.fax_history_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling FaxApi->fax_history_get: #{e}"
 end
 ```
@@ -85,24 +85,24 @@ Calculate Total Price for Fax Messages sent
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FaxApi.new
+api_instance = ClickSendClient::FaxApi.new
 
-fax_message = SwaggerClient::FaxMessageCollection.new # FaxMessageCollection | FaxMessageCollection model
+fax_message = ClickSendClient::FaxMessageCollection.new # FaxMessageCollection | FaxMessageCollection model
 
 
 begin
   #Calculate Total Price for Fax Messages sent
   result = api_instance.fax_price_post(fax_message)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling FaxApi->fax_price_post: #{e}"
 end
 ```
@@ -138,15 +138,15 @@ Get a single fax receipt based on message id.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FaxApi.new
+api_instance = ClickSendClient::FaxApi.new
 
 message_id = 'message_id_example' # String | ID of the message receipt to retrieve
 
@@ -155,7 +155,7 @@ begin
   #Get a single fax receipt based on message id.
   result = api_instance.fax_receipts_by_message_id_get(message_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling FaxApi->fax_receipts_by_message_id_get: #{e}"
 end
 ```
@@ -191,21 +191,21 @@ Get List of Fax Receipts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FaxApi.new
+api_instance = ClickSendClient::FaxApi.new
 
 begin
   #Get List of Fax Receipts
   result = api_instance.fax_receipts_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling FaxApi->fax_receipts_get: #{e}"
 end
 ```
@@ -238,24 +238,24 @@ Send a fax using supplied supported file-types.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::FaxApi.new
+api_instance = ClickSendClient::FaxApi.new
 
-fax_message = SwaggerClient::FaxMessageCollection.new # FaxMessageCollection | FaxMessageCollection model
+fax_message = ClickSendClient::FaxMessageCollection.new # FaxMessageCollection | FaxMessageCollection model
 
 
 begin
   #Send a fax using supplied supported file-types.
   result = api_instance.fax_send_post(fax_message)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling FaxApi->fax_send_post: #{e}"
 end
 ```

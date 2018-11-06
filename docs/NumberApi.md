@@ -1,4 +1,4 @@
-# SwaggerClient::NumberApi
+# ClickSendClient::NumberApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -19,15 +19,15 @@ Buy dedicated number
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::NumberApi.new
+api_instance = ClickSendClient::NumberApi.new
 
 dedicated_number = 'dedicated_number_example' # String | Phone number to purchase
 
@@ -36,7 +36,7 @@ begin
   #Buy dedicated number
   result = api_instance.numbers_buy_by_dedicated_number_post(dedicated_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling NumberApi->numbers_buy_by_dedicated_number_post: #{e}"
 end
 ```
@@ -72,15 +72,15 @@ Get all availible dedicated numbers
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::NumberApi.new
+api_instance = ClickSendClient::NumberApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -91,7 +91,7 @@ begin
   #Get all availible dedicated numbers
   result = api_instance.numbers_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling NumberApi->numbers_get: #{e}"
 end
 ```
@@ -128,15 +128,15 @@ Get all dedicated numbers by country
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::NumberApi.new
+api_instance = ClickSendClient::NumberApi.new
 
 country = 'country_example' # String | Country code to search
 
@@ -151,7 +151,7 @@ begin
   #Get all dedicated numbers by country
   result = api_instance.numbers_search_by_country_get(country, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling NumberApi->numbers_search_by_country_get: #{e}"
 end
 ```

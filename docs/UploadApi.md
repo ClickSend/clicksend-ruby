@@ -1,4 +1,4 @@
-# SwaggerClient::UploadApi
+# ClickSendClient::UploadApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -17,15 +17,15 @@ Upload File
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::UploadApi.new
+api_instance = ClickSendClient::UploadApi.new
 
 content = 'content_example' # String | Base64-encoded file contents
 
@@ -36,7 +36,7 @@ begin
   #Upload File
   result = api_instance.uploads_post(content, convert)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling UploadApi->uploads_post: #{e}"
 end
 ```

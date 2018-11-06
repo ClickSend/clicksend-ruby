@@ -1,4 +1,4 @@
-# SwaggerClient::PostDirectMail
+# ClickSendClient::PostDirectMail
 
 ## Properties
 Name | Type | Description | Notes

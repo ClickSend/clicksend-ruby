@@ -1,4 +1,4 @@
-# SwaggerClient::PostReturnAddressApi
+# ClickSendClient::PostReturnAddressApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,15 +21,15 @@ Delete specific post return address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostReturnAddressApi.new
+api_instance = ClickSendClient::PostReturnAddressApi.new
 
 return_address_id = 56 # Integer | Return address ID
 
@@ -38,7 +38,7 @@ begin
   #Delete specific post return address
   result = api_instance.post_return_addresses_by_return_address_id_delete(return_address_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostReturnAddressApi->post_return_addresses_by_return_address_id_delete: #{e}"
 end
 ```
@@ -74,15 +74,15 @@ Get specific post return address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostReturnAddressApi.new
+api_instance = ClickSendClient::PostReturnAddressApi.new
 
 return_address_id = 56 # Integer | Return address ID
 
@@ -91,7 +91,7 @@ begin
   #Get specific post return address
   result = api_instance.post_return_addresses_by_return_address_id_get(return_address_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostReturnAddressApi->post_return_addresses_by_return_address_id_get: #{e}"
 end
 ```
@@ -127,26 +127,26 @@ Update post return address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostReturnAddressApi.new
+api_instance = ClickSendClient::PostReturnAddressApi.new
 
 return_address_id = 56 # Integer | Return address ID
 
-return_address = SwaggerClient::Address.new # Address | Address model
+return_address = ClickSendClient::Address.new # Address | Address model
 
 
 begin
   #Update post return address
   result = api_instance.post_return_addresses_by_return_address_id_put(return_address_id, return_address)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostReturnAddressApi->post_return_addresses_by_return_address_id_put: #{e}"
 end
 ```
@@ -183,15 +183,15 @@ Get list of post return addresses
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostReturnAddressApi.new
+api_instance = ClickSendClient::PostReturnAddressApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -202,7 +202,7 @@ begin
   #Get list of post return addresses
   result = api_instance.post_return_addresses_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostReturnAddressApi->post_return_addresses_get: #{e}"
 end
 ```
@@ -239,24 +239,24 @@ Create post return address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::PostReturnAddressApi.new
+api_instance = ClickSendClient::PostReturnAddressApi.new
 
-return_address = SwaggerClient::Address.new # Address | Address model
+return_address = ClickSendClient::Address.new # Address | Address model
 
 
 begin
   #Create post return address
   result = api_instance.post_return_addresses_post(return_address)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling PostReturnAddressApi->post_return_addresses_post: #{e}"
 end
 ```

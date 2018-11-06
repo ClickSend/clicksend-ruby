@@ -1,4 +1,4 @@
-# SwaggerClient::EmailMarketingApi
+# ClickSendClient::EmailMarketingApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -30,15 +30,15 @@ Get all email addresses
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -49,7 +49,7 @@ begin
   #Get all email addresses
   result = api_instance.allowed_email_address_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->allowed_email_address_get: #{e}"
 end
 ```
@@ -86,15 +86,15 @@ Create allowed Email Address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_address = 'email_address_example' # String | Email to be allowed.
 
@@ -103,7 +103,7 @@ begin
   #Create allowed Email Address
   result = api_instance.allowed_email_address_post(email_address)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->allowed_email_address_post: #{e}"
 end
 ```
@@ -139,15 +139,15 @@ Cancel email campaign
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_campaign_id = 56 # Integer | Allowed email campaign id
 
@@ -156,7 +156,7 @@ begin
   #Cancel email campaign
   result = api_instance.cancel_email_campaign_put(email_campaign_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->cancel_email_campaign_put: #{e}"
 end
 ```
@@ -192,15 +192,15 @@ Get specific email campaign
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_campaign_id = 56 # Integer | Allowed email campaign id
 
@@ -209,7 +209,7 @@ begin
   #Get specific email campaign
   result = api_instance.email_campaign_get(email_campaign_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_get: #{e}"
 end
 ```
@@ -245,15 +245,15 @@ Export specific email campaign history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_campaign_id = 56 # Integer | Allowed email campaign id
 
@@ -266,7 +266,7 @@ begin
   #Export specific email campaign history
   result = api_instance.email_campaign_history_export_get(email_campaign_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_history_export_get: #{e}"
 end
 ```
@@ -304,15 +304,15 @@ Get specific email campaign history
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_campaign_id = 56 # Integer | Allowed email campaign id
 
@@ -327,7 +327,7 @@ begin
   #Get specific email campaign history
   result = api_instance.email_campaign_history_get(email_campaign_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_history_get: #{e}"
 end
 ```
@@ -367,24 +367,24 @@ Send email campaign
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
-email_campaign = SwaggerClient::EmailCampaign.new # EmailCampaign | Email model
+email_campaign = ClickSendClient::EmailCampaign.new # EmailCampaign | Email model
 
 
 begin
   #Send email campaign
   result = api_instance.email_campaign_post(email_campaign)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_post: #{e}"
 end
 ```
@@ -420,24 +420,24 @@ Calculate email campaign price
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
-email_campaign = SwaggerClient::EmailCampaign.new # EmailCampaign | Email model
+email_campaign = ClickSendClient::EmailCampaign.new # EmailCampaign | Email model
 
 
 begin
   #Calculate email campaign price
   result = api_instance.email_campaign_price_post(email_campaign)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_price_post: #{e}"
 end
 ```
@@ -473,15 +473,15 @@ Edit email campaign
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_campaign_id = 56 # Integer | Allowed email campaign id
 
@@ -490,7 +490,7 @@ begin
   #Edit email campaign
   result = api_instance.email_campaign_put(email_campaign_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_put: #{e}"
 end
 ```
@@ -526,15 +526,15 @@ Get all email campaigns
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -545,7 +545,7 @@ begin
   #Get all email campaigns
   result = api_instance.email_campaigns_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaigns_get: #{e}"
 end
 ```
@@ -582,15 +582,15 @@ Send verification token
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_address_id = 56 # Integer | Allowed email address id
 
@@ -599,7 +599,7 @@ begin
   #Send verification token
   result = api_instance.send_verification_token_get(email_address_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->send_verification_token_get: #{e}"
 end
 ```
@@ -635,15 +635,15 @@ Delete specific email address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_address_id = 56 # Integer | Allowed email address id
 
@@ -652,7 +652,7 @@ begin
   #Delete specific email address
   result = api_instance.specific_allowed_email_address_delete(email_address_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->specific_allowed_email_address_delete: #{e}"
 end
 ```
@@ -688,15 +688,15 @@ Get specific email address
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_address_id = 56 # Integer | Allowed email address id
 
@@ -705,7 +705,7 @@ begin
   #Get specific email address
   result = api_instance.specific_allowed_email_address_get(email_address_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->specific_allowed_email_address_get: #{e}"
 end
 ```
@@ -741,15 +741,15 @@ Verify email address using verification token
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::EmailMarketingApi.new
+api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_address_id = 56 # Integer | Allowed email address id
 
@@ -760,7 +760,7 @@ begin
   #Verify email address using verification token
   result = api_instance.verify_allowed_email_address_get(email_address_id, activation_token)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->verify_allowed_email_address_get: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::MasterEmailTemplatesApi
+# ClickSendClient::MasterEmailTemplatesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,15 +21,15 @@ Get all master email template categories
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MasterEmailTemplatesApi.new
+api_instance = ClickSendClient::MasterEmailTemplatesApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -40,7 +40,7 @@ begin
   #Get all master email template categories
   result = api_instance.master_email_template_categories_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MasterEmailTemplatesApi->master_email_template_categories_get: #{e}"
 end
 ```
@@ -77,15 +77,15 @@ Get specific master email template category
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MasterEmailTemplatesApi.new
+api_instance = ClickSendClient::MasterEmailTemplatesApi.new
 
 category_id = 56 # Integer | Email category id
 
@@ -94,7 +94,7 @@ begin
   #Get specific master email template category
   result = api_instance.master_email_template_category_get(category_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MasterEmailTemplatesApi->master_email_template_category_get: #{e}"
 end
 ```
@@ -130,15 +130,15 @@ Get specific master email template
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MasterEmailTemplatesApi.new
+api_instance = ClickSendClient::MasterEmailTemplatesApi.new
 
 template_id = 56 # Integer | Email template id
 
@@ -147,7 +147,7 @@ begin
   #Get specific master email template
   result = api_instance.master_email_template_get(template_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MasterEmailTemplatesApi->master_email_template_get: #{e}"
 end
 ```
@@ -183,15 +183,15 @@ Get all master email templates
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MasterEmailTemplatesApi.new
+api_instance = ClickSendClient::MasterEmailTemplatesApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -202,7 +202,7 @@ begin
   #Get all master email templates
   result = api_instance.master_email_templates_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MasterEmailTemplatesApi->master_email_templates_get: #{e}"
 end
 ```
@@ -239,15 +239,15 @@ Get all master email templates in a category
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::MasterEmailTemplatesApi.new
+api_instance = ClickSendClient::MasterEmailTemplatesApi.new
 
 category_id = 56 # Integer | Email category id
 
@@ -260,7 +260,7 @@ begin
   #Get all master email templates in a category
   result = api_instance.master_email_templates_in_category_get(category_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling MasterEmailTemplatesApi->master_email_templates_in_category_get: #{e}"
 end
 ```

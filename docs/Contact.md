@@ -1,4 +1,4 @@
-# SwaggerClient::Contact
+# ClickSendClient::Contact
 
 ## Properties
 Name | Type | Description | Notes

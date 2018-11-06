@@ -1,4 +1,4 @@
-# SwaggerClient::InboundFAXRule
+# ClickSendClient::InboundFAXRule
 
 ## Properties
 Name | Type | Description | Notes

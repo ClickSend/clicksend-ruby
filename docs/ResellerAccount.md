@@ -1,4 +1,4 @@
-# SwaggerClient::ResellerAccount
+# ClickSendClient::ResellerAccount
 
 ## Properties
 Name | Type | Description | Notes

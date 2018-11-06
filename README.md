@@ -9,27 +9,27 @@
 To build the Ruby code into a gem:
 
 ```shell
-gem build swagger_client.gemspec
+gem build clicksend_client.gemspec
 ```
 
 Then either install the gem locally:
 
 ```shell
-gem install ./swagger_client-1.0.0.gem
+gem install ./clicksend_client-1.0.0.gem
 ```
-(for development, run `gem install --dev ./swagger_client-1.0.0.gem` to install the development dependencies)
+(for development, run `gem install --dev ./clicksend_client-1.0.0.gem` to install the development dependencies)
 
 or publish the gem to a gem hosting service, e.g. [RubyGems](https://rubygems.org/).
 
 Finally add this to the Gemfile:
 
-    gem 'swagger_client', '~> 1.0.0'
+    gem 'clicksend_client', '~> 1.0.0'
 
 ### Install from Git
 
 If the Ruby gem is hosted at a git repository: https://github.com/GIT_USER_ID/GIT_REPO_ID, then add the following in the Gemfile:
 
-    gem 'swagger_client', :git => 'https://github.com/GIT_USER_ID/GIT_REPO_ID.git'
+    gem 'clicksend_client', :git => 'https://github.com/GIT_USER_ID/GIT_REPO_ID.git'
 
 ### Include the Ruby code directly
 
@@ -44,22 +44,22 @@ ruby -Ilib script.rb
 Please follow the [installation](#installation) procedure and then run the following code:
 ```ruby
 # Load the gem
-require 'swagger_client'
+require 'clicksend_client'
 
 # Setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::AccountApi.new
+api_instance = ClickSendClient::AccountApi.new
 
 begin
   #Get account information
   result = api_instance.account_get
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountApi->account_get: #{e}"
 end
 

@@ -1,4 +1,4 @@
-# SwaggerClient::EmailRecipient
+# ClickSendClient::EmailRecipient
 
 ## Properties
 Name | Type | Description | Notes

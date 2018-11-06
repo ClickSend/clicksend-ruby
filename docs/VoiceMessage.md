@@ -1,4 +1,4 @@
-# SwaggerClient::VoiceMessage
+# ClickSendClient::VoiceMessage
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ContactListImport
+# ClickSendClient::ContactListImport
 
 ## Properties
 Name | Type | Description | Notes

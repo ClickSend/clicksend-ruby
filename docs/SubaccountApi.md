@@ -1,4 +1,4 @@
-# SwaggerClient::SubaccountApi
+# ClickSendClient::SubaccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -22,15 +22,15 @@ Delete a subaccount
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SubaccountApi.new
+api_instance = ClickSendClient::SubaccountApi.new
 
 subaccount_id = 56 # Integer | ID of subaccount to delete
 
@@ -39,7 +39,7 @@ begin
   #Delete a subaccount
   result = api_instance.subaccounts_by_subaccount_id_delete(subaccount_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SubaccountApi->subaccounts_by_subaccount_id_delete: #{e}"
 end
 ```
@@ -75,15 +75,15 @@ Get specific subaccount
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SubaccountApi.new
+api_instance = ClickSendClient::SubaccountApi.new
 
 subaccount_id = 56 # Integer | ID of subaccount to get
 
@@ -92,7 +92,7 @@ begin
   #Get specific subaccount
   result = api_instance.subaccounts_by_subaccount_id_get(subaccount_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SubaccountApi->subaccounts_by_subaccount_id_get: #{e}"
 end
 ```
@@ -128,26 +128,26 @@ Update subaccount
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SubaccountApi.new
+api_instance = ClickSendClient::SubaccountApi.new
 
 subaccount_id = 56 # Integer | ID of subaccount to update
 
-subaccount = SwaggerClient::Subaccount.new # Subaccount | Subaccount model
+subaccount = ClickSendClient::Subaccount.new # Subaccount | Subaccount model
 
 
 begin
   #Update subaccount
   result = api_instance.subaccounts_by_subaccount_id_put(subaccount_id, subaccount)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SubaccountApi->subaccounts_by_subaccount_id_put: #{e}"
 end
 ```
@@ -184,15 +184,15 @@ Get all subaccounts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SubaccountApi.new
+api_instance = ClickSendClient::SubaccountApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -203,7 +203,7 @@ begin
   #Get all subaccounts
   result = api_instance.subaccounts_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SubaccountApi->subaccounts_get: #{e}"
 end
 ```
@@ -240,24 +240,24 @@ Create new subaccount
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SubaccountApi.new
+api_instance = ClickSendClient::SubaccountApi.new
 
-subaccount = SwaggerClient::Subaccount.new # Subaccount | Subaccount model
+subaccount = ClickSendClient::Subaccount.new # Subaccount | Subaccount model
 
 
 begin
   #Create new subaccount
   result = api_instance.subaccounts_post(subaccount)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SubaccountApi->subaccounts_post: #{e}"
 end
 ```
@@ -293,15 +293,15 @@ Regenerate an API Key
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SubaccountApi.new
+api_instance = ClickSendClient::SubaccountApi.new
 
 subaccount_id = 56 # Integer | ID of subaccount to regenerate API key for
 
@@ -310,7 +310,7 @@ begin
   #Regenerate an API Key
   result = api_instance.subaccounts_regen_api_key_by_subaccount_id_put(subaccount_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SubaccountApi->subaccounts_regen_api_key_by_subaccount_id_put: #{e}"
 end
 ```

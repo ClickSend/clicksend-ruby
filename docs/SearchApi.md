@@ -1,4 +1,4 @@
-# SwaggerClient::SearchApi
+# ClickSendClient::SearchApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -17,15 +17,15 @@ Get list of searched contact list
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::SearchApi.new
+api_instance = ClickSendClient::SearchApi.new
 
 q = 'q_example' # String | Your keyword or query.
 
@@ -38,7 +38,7 @@ begin
   #Get list of searched contact list
   result = api_instance.search_contacts_lists_get(q, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling SearchApi->search_contacts_lists_get: #{e}"
 end
 ```

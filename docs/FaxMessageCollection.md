@@ -1,4 +1,4 @@
-# SwaggerClient::FaxMessageCollection
+# ClickSendClient::FaxMessageCollection
 
 ## Properties
 Name | Type | Description | Notes

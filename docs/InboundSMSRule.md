@@ -1,4 +1,4 @@
-# SwaggerClient::InboundSMSRule
+# ClickSendClient::InboundSMSRule
 
 ## Properties
 Name | Type | Description | Notes

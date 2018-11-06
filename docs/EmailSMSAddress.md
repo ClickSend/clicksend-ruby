@@ -1,4 +1,4 @@
-# SwaggerClient::EmailSMSAddress
+# ClickSendClient::EmailSMSAddress
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::CreditCard
+# ClickSendClient::CreditCard
 
 ## Properties
 Name | Type | Description | Notes

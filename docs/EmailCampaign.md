@@ -1,4 +1,4 @@
-# SwaggerClient::EmailCampaign
+# ClickSendClient::EmailCampaign
 
 ## Properties
 Name | Type | Description | Notes

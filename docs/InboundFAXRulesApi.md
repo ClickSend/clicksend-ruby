@@ -1,4 +1,4 @@
-# SwaggerClient::InboundFAXRulesApi
+# ClickSendClient::InboundFAXRulesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -21,15 +21,15 @@ Delete inbound fax automation
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::InboundFAXRulesApi.new
+api_instance = ClickSendClient::InboundFAXRulesApi.new
 
 inbound_rule_id = 56 # Integer | Inbound rule id
 
@@ -38,7 +38,7 @@ begin
   #Delete inbound fax automation
   result = api_instance.fax_inbound_automation_delete(inbound_rule_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling InboundFAXRulesApi->fax_inbound_automation_delete: #{e}"
 end
 ```
@@ -74,15 +74,15 @@ Get specific inbound fax automation
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::InboundFAXRulesApi.new
+api_instance = ClickSendClient::InboundFAXRulesApi.new
 
 inbound_rule_id = 56 # Integer | Inbound rule id
 
@@ -91,7 +91,7 @@ begin
   #Get specific inbound fax automation
   result = api_instance.fax_inbound_automation_get(inbound_rule_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling InboundFAXRulesApi->fax_inbound_automation_get: #{e}"
 end
 ```
@@ -127,24 +127,24 @@ Create new inbound fax automation
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::InboundFAXRulesApi.new
+api_instance = ClickSendClient::InboundFAXRulesApi.new
 
-inbound_fax_rule = SwaggerClient::InboundFAXRule.new # InboundFAXRule | Inbound fax rule model
+inbound_fax_rule = ClickSendClient::InboundFAXRule.new # InboundFAXRule | Inbound fax rule model
 
 
 begin
   #Create new inbound fax automation
   result = api_instance.fax_inbound_automation_post(inbound_fax_rule)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling InboundFAXRulesApi->fax_inbound_automation_post: #{e}"
 end
 ```
@@ -180,26 +180,26 @@ Update inbound fax automation
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::InboundFAXRulesApi.new
+api_instance = ClickSendClient::InboundFAXRulesApi.new
 
 inbound_rule_id = 56 # Integer | Inbound rule id
 
-inbound_fax_rule = SwaggerClient::InboundFAXRule.new # InboundFAXRule | Inbound fax rule model
+inbound_fax_rule = ClickSendClient::InboundFAXRule.new # InboundFAXRule | Inbound fax rule model
 
 
 begin
   #Update inbound fax automation
   result = api_instance.fax_inbound_automation_put(inbound_rule_id, inbound_fax_rule)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling InboundFAXRulesApi->fax_inbound_automation_put: #{e}"
 end
 ```
@@ -236,15 +236,15 @@ Get all inbound fax automations
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::InboundFAXRulesApi.new
+api_instance = ClickSendClient::InboundFAXRulesApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -255,7 +255,7 @@ begin
   #Get all inbound fax automations
   result = api_instance.fax_inbound_automations_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling InboundFAXRulesApi->fax_inbound_automations_get: #{e}"
 end
 ```

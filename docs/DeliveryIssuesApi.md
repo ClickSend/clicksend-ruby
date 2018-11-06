@@ -1,4 +1,4 @@
-# SwaggerClient::DeliveryIssuesApi
+# ClickSendClient::DeliveryIssuesApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -18,15 +18,15 @@ Get all delivery issues
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DeliveryIssuesApi.new
+api_instance = ClickSendClient::DeliveryIssuesApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -37,7 +37,7 @@ begin
   #Get all delivery issues
   result = api_instance.delivery_issues_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling DeliveryIssuesApi->delivery_issues_get: #{e}"
 end
 ```
@@ -74,24 +74,24 @@ Create delivery Issue
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::DeliveryIssuesApi.new
+api_instance = ClickSendClient::DeliveryIssuesApi.new
 
-delivery_issue = SwaggerClient::DeliveryIssue.new # DeliveryIssue | DeliveryIssue model
+delivery_issue = ClickSendClient::DeliveryIssue.new # DeliveryIssue | DeliveryIssue model
 
 
 begin
   #Create delivery Issue
   result = api_instance.delivery_issues_post(delivery_issue)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling DeliveryIssuesApi->delivery_issues_post: #{e}"
 end
 ```

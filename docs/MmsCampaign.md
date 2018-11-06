@@ -1,4 +1,4 @@
-# SwaggerClient::MmsCampaign
+# ClickSendClient::MmsCampaign
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::DeliveryReceiptRule
+# ClickSendClient::DeliveryReceiptRule
 
 ## Properties
 Name | Type | Description | Notes

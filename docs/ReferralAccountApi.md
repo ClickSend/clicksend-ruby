@@ -1,4 +1,4 @@
-# SwaggerClient::ReferralAccountApi
+# ClickSendClient::ReferralAccountApi
 
 All URIs are relative to *https://rest.clicksend.com/v3*
 
@@ -17,15 +17,15 @@ Get all referral accounts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'clicksend_client'
 # setup authorization
-SwaggerClient.configure do |config|
+ClickSendClient.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = SwaggerClient::ReferralAccountApi.new
+api_instance = ClickSendClient::ReferralAccountApi.new
 
 opts = { 
   page: 1, # Integer | Page number
@@ -36,7 +36,7 @@ begin
   #Get all referral accounts
   result = api_instance.referral_accounts_get(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue ClickSendClient::ApiError => e
   puts "Exception when calling ReferralAccountApi->referral_accounts_get: #{e}"
 end
 ```
