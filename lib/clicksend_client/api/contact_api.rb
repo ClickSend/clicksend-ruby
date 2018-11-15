@@ -443,7 +443,7 @@ module ClickSendClient
         fail ArgumentError, "Missing the required parameter 'to_list_id' when calling ContactApi.lists_transfer_contact_put"
       end
       # resource path
-      local_var_path = '/lists/{from_list_id}/contacts/{contact_id}/{to_list_id}'.sub('{' + 'from_list_id' + '}', from_list_id.to_s).sub('{' + 'contact_id' + '}', contact_id.to_s).sub('{' + 'to_list_id' + '}', to_list_id.to_s)
+      local_var_path = '/lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}'.sub('{' + 'from_list_id' + '}', from_list_id.to_s).sub('{' + 'contact_id' + '}', contact_id.to_s).sub('{' + 'to_list_id' + '}', to_list_id.to_s)
 
       # query parameters
       query_params = {}

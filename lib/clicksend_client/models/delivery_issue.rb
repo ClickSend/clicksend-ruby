@@ -37,7 +37,7 @@ module ClickSendClient
         :'type' => :'type',
         :'description' => :'description',
         :'client_comments' => :'client_comments',
-        :'email_address' => :'email-address'
+        :'email_address' => :'email_address'
       }
     end
 
@@ -76,8 +76,8 @@ module ClickSendClient
         self.client_comments = attributes[:'client_comments']
       end
 
-      if attributes.has_key?(:'email-address')
-        self.email_address = attributes[:'email-address']
+      if attributes.has_key?(:'email_address')
+        self.email_address = attributes[:'email_address']
       end
     end
 
