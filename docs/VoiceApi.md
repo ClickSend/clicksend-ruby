@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 
 # **voice_history_export_get**
-> File voice_history_export_get(filename)
+> String voice_history_export_get(filename)
 
 Export voice history
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**String**
 
 ### Authorization
 

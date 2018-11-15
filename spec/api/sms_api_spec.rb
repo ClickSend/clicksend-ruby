@@ -60,7 +60,7 @@ describe 'SMSApi' do
   # Export all sms history
   # @param filename Filename to download history as
   # @param [Hash] opts the optional parameters
-  # @return [File]
+  # @return [String]
   describe 'sms_history_export_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

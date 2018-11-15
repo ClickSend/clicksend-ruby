@@ -23,7 +23,7 @@ module ClickSendClient
     # Export postcard history to a CSV file
     # @param filename Filename to export to
     # @param [Hash] opts the optional parameters
-    # @return [File]
+    # @return [String]
     def post_postcards_history_export_get(filename, opts = {})
       data, _status_code, _headers = post_postcards_history_export_get_with_http_info(filename, opts)
       data
@@ -33,7 +33,7 @@ module ClickSendClient
     # Export postcard history to a CSV file
     # @param filename Filename to export to
     # @param [Hash] opts the optional parameters
-    # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def post_postcards_history_export_get_with_http_info(filename, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PostPostcardApi.post_postcards_history_export_get ...'
@@ -68,7 +68,7 @@ module ClickSendClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'File')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PostPostcardApi#post_postcards_history_export_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

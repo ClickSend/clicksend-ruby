@@ -39,7 +39,7 @@ describe 'TransactionalEmailApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :date_from Start date
   # @option opts [Integer] :date_to End date
-  # @return [File]
+  # @return [String]
   describe 'email_history_export_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

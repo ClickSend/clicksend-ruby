@@ -249,7 +249,7 @@ module ClickSendClient
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :date_from Start date
     # @option opts [Integer] :date_to End date
-    # @return [File]
+    # @return [String]
     def email_campaign_history_export_get(email_campaign_id, opts = {})
       data, _status_code, _headers = email_campaign_history_export_get_with_http_info(email_campaign_id, opts)
       data
@@ -261,7 +261,7 @@ module ClickSendClient
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :date_from Start date
     # @option opts [Integer] :date_to End date
-    # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def email_campaign_history_export_get_with_http_info(email_campaign_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EmailMarketingApi.email_campaign_history_export_get ...'
@@ -297,7 +297,7 @@ module ClickSendClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'File')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: EmailMarketingApi#email_campaign_history_export_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

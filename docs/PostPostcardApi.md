@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **post_postcards_history_export_get**
-> File post_postcards_history_export_get(filename)
+> String post_postcards_history_export_get(filename)
 
 Export postcard history to a CSV file
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**String**
 
 ### Authorization
 

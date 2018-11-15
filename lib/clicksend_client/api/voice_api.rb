@@ -125,7 +125,7 @@ module ClickSendClient
     # Export voice history
     # @param filename Filename to export to
     # @param [Hash] opts the optional parameters
-    # @return [File]
+    # @return [String]
     def voice_history_export_get(filename, opts = {})
       data, _status_code, _headers = voice_history_export_get_with_http_info(filename, opts)
       data
@@ -135,7 +135,7 @@ module ClickSendClient
     # Export voice history
     # @param filename Filename to export to
     # @param [Hash] opts the optional parameters
-    # @return [Array<(File, Fixnum, Hash)>] File data, response status code and response headers
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def voice_history_export_get_with_http_info(filename, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VoiceApi.voice_history_export_get ...'
@@ -170,7 +170,7 @@ module ClickSendClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'File')
+        :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: VoiceApi#voice_history_export_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

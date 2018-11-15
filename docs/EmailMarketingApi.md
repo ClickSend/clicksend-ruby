@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 
 # **email_campaign_history_export_get**
-> File email_campaign_history_export_get(email_campaign_id, opts)
+> String email_campaign_history_export_get(email_campaign_id, opts)
 
 Export specific email campaign history
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**String**
 
 ### Authorization
 

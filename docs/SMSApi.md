@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 
 # **sms_history_export_get**
-> File sms_history_export_get(filename)
+> String sms_history_export_get(filename)
 
 Export all sms history
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**String**
 
 ### Authorization
 

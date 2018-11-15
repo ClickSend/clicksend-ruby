@@ -37,7 +37,7 @@ describe 'PostPostcardApi' do
   # Export postcard history to a CSV file
   # @param filename Filename to export to
   # @param [Hash] opts the optional parameters
-  # @return [File]
+  # @return [String]
   describe 'post_postcards_history_export_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
