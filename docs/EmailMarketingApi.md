@@ -14,10 +14,10 @@ Method | HTTP request | Description
 [**email_campaign_price_post**](EmailMarketingApi.md#email_campaign_price_post) | **POST** /email-campaigns/price | Calculate email campaign price
 [**email_campaign_put**](EmailMarketingApi.md#email_campaign_put) | **PUT** /email-campaigns/{email_campaign_id} | Edit email campaign
 [**email_campaigns_get**](EmailMarketingApi.md#email_campaigns_get) | **GET** /email-campaigns | Get all email campaigns
-[**send_verification_token_get**](EmailMarketingApi.md#send_verification_token_get) | **GET** /email/address-verify/{email_address_id}/send | Send verification token
+[**send_verification_token_get**](EmailMarketingApi.md#send_verification_token_get) | **PUT** /email/address-verify/{email_address_id}/send | Send verification token
 [**specific_allowed_email_address_delete**](EmailMarketingApi.md#specific_allowed_email_address_delete) | **DELETE** /email/addresses/{email_address_id} | Delete specific email address
 [**specific_allowed_email_address_get**](EmailMarketingApi.md#specific_allowed_email_address_get) | **GET** /email/addresses/{email_address_id} | Get specific email address
-[**verify_allowed_email_address_get**](EmailMarketingApi.md#verify_allowed_email_address_get) | **GET** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
+[**verify_allowed_email_address_get**](EmailMarketingApi.md#verify_allowed_email_address_get) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
 
 # **allowed_email_address_get**
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 
 # **email_campaign_put**
-> String email_campaign_put(email_campaign_id)
+> String email_campaign_put(email_campaign_id, email_campaign)
 
 Edit email campaign
 
@@ -485,10 +485,12 @@ api_instance = ClickSendClient::EmailMarketingApi.new
 
 email_campaign_id = 56 # Integer | Allowed email campaign id
 
+email_campaign = ClickSendClient::EmailCampaign.new # EmailCampaign | Email model
+
 
 begin
   #Edit email campaign
-  result = api_instance.email_campaign_put(email_campaign_id)
+  result = api_instance.email_campaign_put(email_campaign_id, email_campaign)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->email_campaign_put: #{e}"
@@ -500,6 +502,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email_campaign_id** | **Integer**| Allowed email campaign id | 
+ **email_campaign** | [**EmailCampaign**](EmailCampaign.md)| Email model | 
 
 ### Return type
 

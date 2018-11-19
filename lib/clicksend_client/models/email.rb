@@ -27,6 +27,9 @@ module ClickSendClient
     # From Email object.
     attr_accessor :from
 
+    # Subject of the email.
+    attr_accessor :subject
+
     # Body of the email.
     attr_accessor :body
 
@@ -43,6 +46,7 @@ module ClickSendClient
         :'cc' => :'cc',
         :'bcc' => :'bcc',
         :'from' => :'from',
+        :'subject' => :'subject',
         :'body' => :'body',
         :'attachments' => :'attachments',
         :'schedule' => :'schedule'
@@ -56,6 +60,7 @@ module ClickSendClient
         :'cc' => :'Array<EmailRecipient>',
         :'bcc' => :'Array<EmailRecipient>',
         :'from' => :'Array<EmailFrom>',
+        :'subject' => :'String',
         :'body' => :'String',
         :'attachments' => :'Array<Attachment>',
         :'schedule' => :'Float'
@@ -92,6 +97,10 @@ module ClickSendClient
         if (value = attributes[:'from']).is_a?(Array)
           self.from = value
         end
+      end
+
+      if attributes.has_key?(:'subject')
+        self.subject = attributes[:'subject']
       end
 
       if attributes.has_key?(:'body')
@@ -146,6 +155,7 @@ module ClickSendClient
           cc == o.cc &&
           bcc == o.bcc &&
           from == o.from &&
+          subject == o.subject &&
           body == o.body &&
           attachments == o.attachments &&
           schedule == o.schedule
@@ -160,7 +170,7 @@ module ClickSendClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [to, cc, bcc, from, body, attachments, schedule].hash
+      [to, cc, bcc, from, subject, body, attachments, schedule].hash
     end
 
     # Builds the object from hash

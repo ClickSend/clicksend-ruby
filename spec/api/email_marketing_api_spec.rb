@@ -139,6 +139,7 @@ describe 'EmailMarketingApi' do
   # Edit email campaign
   # Edit email campaign
   # @param email_campaign_id Allowed email campaign id
+  # @param email_campaign Email model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'email_campaign_put test' do

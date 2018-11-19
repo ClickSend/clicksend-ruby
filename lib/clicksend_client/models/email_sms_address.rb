@@ -21,11 +21,15 @@ module ClickSendClient
     # Your sender id
     attr_accessor :from
 
+    # Your subaccount id
+    attr_accessor :subaccount_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'email_address' => :'email_address',
-        :'from' => :'from'
+        :'from' => :'from',
+        :'subaccount_id' => :'subaccount_id'
       }
     end
 
@@ -33,7 +37,8 @@ module ClickSendClient
     def self.clicksend_types
       {
         :'email_address' => :'String',
-        :'from' => :'String'
+        :'from' => :'String',
+        :'subaccount_id' => :'String'
       }
     end
 
@@ -51,6 +56,10 @@ module ClickSendClient
 
       if attributes.has_key?(:'from')
         self.from = attributes[:'from']
+      end
+
+      if attributes.has_key?(:'subaccount_id')
+        self.subaccount_id = attributes[:'subaccount_id']
       end
     end
 
@@ -83,7 +92,8 @@ module ClickSendClient
       return true if self.equal?(o)
       self.class == o.class &&
           email_address == o.email_address &&
-          from == o.from
+          from == o.from &&
+          subaccount_id == o.subaccount_id
     end
 
     # @see the `==` method
@@ -95,7 +105,7 @@ module ClickSendClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email_address, from].hash
+      [email_address, from, subaccount_id].hash
     end
 
     # Builds the object from hash

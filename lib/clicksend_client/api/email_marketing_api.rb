@@ -488,25 +488,31 @@ module ClickSendClient
     # Edit email campaign
     # Edit email campaign
     # @param email_campaign_id Allowed email campaign id
+    # @param email_campaign Email model
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def email_campaign_put(email_campaign_id, opts = {})
-      data, _status_code, _headers = email_campaign_put_with_http_info(email_campaign_id, opts)
+    def email_campaign_put(email_campaign_id, email_campaign, opts = {})
+      data, _status_code, _headers = email_campaign_put_with_http_info(email_campaign_id, email_campaign, opts)
       data
     end
 
     # Edit email campaign
     # Edit email campaign
     # @param email_campaign_id Allowed email campaign id
+    # @param email_campaign Email model
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def email_campaign_put_with_http_info(email_campaign_id, opts = {})
+    def email_campaign_put_with_http_info(email_campaign_id, email_campaign, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EmailMarketingApi.email_campaign_put ...'
       end
       # verify the required parameter 'email_campaign_id' is set
       if @api_client.config.client_side_validation && email_campaign_id.nil?
         fail ArgumentError, "Missing the required parameter 'email_campaign_id' when calling EmailMarketingApi.email_campaign_put"
+      end
+      # verify the required parameter 'email_campaign' is set
+      if @api_client.config.client_side_validation && email_campaign.nil?
+        fail ArgumentError, "Missing the required parameter 'email_campaign' when calling EmailMarketingApi.email_campaign_put"
       end
       # resource path
       local_var_path = '/email-campaigns/{email_campaign_id}'.sub('{' + 'email_campaign_id' + '}', email_campaign_id.to_s)
@@ -525,7 +531,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(email_campaign)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -643,7 +649,7 @@ module ClickSendClient
       # http body (model)
       post_body = nil
       auth_names = ['BasicAuth']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -811,7 +817,7 @@ module ClickSendClient
       # http body (model)
       post_body = nil
       auth_names = ['BasicAuth']
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
