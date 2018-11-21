@@ -312,7 +312,7 @@ end
 
 api_instance = ClickSendClient::SMSApi.new
 
-url = 'url_example' # String | Your url.
+url = ClickSendClient::Url.new # Url | Url model
 
 
 begin
@@ -328,7 +328,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **String**| Your url. | 
+ **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -581,7 +581,7 @@ end
 
 api_instance = ClickSendClient::SMSApi.new
 
-url = 'url_example' # String | Your url.
+url = ClickSendClient::Url.new # Url | Url model
 
 
 begin
@@ -597,7 +597,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **String**| Your url. | 
+ **url** | [**Url**](Url.md)| Url model | 
 
 ### Return type
 
@@ -609,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

@@ -245,26 +245,26 @@ module ClickSendClient
     end
     # Create email to sms stripped string rule
     # Create email to sms stripped string rules
-    # @param strip_string String to be stripped.
+    # @param stripped_string StrippedString model
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def sms_email_sms_stripped_string_post(strip_string, opts = {})
-      data, _status_code, _headers = sms_email_sms_stripped_string_post_with_http_info(strip_string, opts)
+    def sms_email_sms_stripped_string_post(stripped_string, opts = {})
+      data, _status_code, _headers = sms_email_sms_stripped_string_post_with_http_info(stripped_string, opts)
       data
     end
 
     # Create email to sms stripped string rule
     # Create email to sms stripped string rules
-    # @param strip_string String to be stripped.
+    # @param stripped_string StrippedString model
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def sms_email_sms_stripped_string_post_with_http_info(strip_string, opts = {})
+    def sms_email_sms_stripped_string_post_with_http_info(stripped_string, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EmailToSmsApi.sms_email_sms_stripped_string_post ...'
       end
-      # verify the required parameter 'strip_string' is set
-      if @api_client.config.client_side_validation && strip_string.nil?
-        fail ArgumentError, "Missing the required parameter 'strip_string' when calling EmailToSmsApi.sms_email_sms_stripped_string_post"
+      # verify the required parameter 'stripped_string' is set
+      if @api_client.config.client_side_validation && stripped_string.nil?
+        fail ArgumentError, "Missing the required parameter 'stripped_string' when calling EmailToSmsApi.sms_email_sms_stripped_string_post"
       end
       # resource path
       local_var_path = '/sms/email-sms-stripped-strings'
@@ -277,14 +277,13 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
 
       # form parameters
       form_params = {}
-      form_params['strip-string'] = strip_string
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(stripped_string)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -300,28 +299,28 @@ module ClickSendClient
     end
     # Update email to sms stripped string rule
     # Update email to sms stripped string rule
-    # @param strip_string String to be stripped.
+    # @param url Url model
     # @param rule_id Your rule id
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def sms_email_sms_stripped_string_put(strip_string, rule_id, opts = {})
-      data, _status_code, _headers = sms_email_sms_stripped_string_put_with_http_info(strip_string, rule_id, opts)
+    def sms_email_sms_stripped_string_put(url, rule_id, opts = {})
+      data, _status_code, _headers = sms_email_sms_stripped_string_put_with_http_info(url, rule_id, opts)
       data
     end
 
     # Update email to sms stripped string rule
     # Update email to sms stripped string rule
-    # @param strip_string String to be stripped.
+    # @param url Url model
     # @param rule_id Your rule id
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def sms_email_sms_stripped_string_put_with_http_info(strip_string, rule_id, opts = {})
+    def sms_email_sms_stripped_string_put_with_http_info(url, rule_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EmailToSmsApi.sms_email_sms_stripped_string_put ...'
       end
-      # verify the required parameter 'strip_string' is set
-      if @api_client.config.client_side_validation && strip_string.nil?
-        fail ArgumentError, "Missing the required parameter 'strip_string' when calling EmailToSmsApi.sms_email_sms_stripped_string_put"
+      # verify the required parameter 'url' is set
+      if @api_client.config.client_side_validation && url.nil?
+        fail ArgumentError, "Missing the required parameter 'url' when calling EmailToSmsApi.sms_email_sms_stripped_string_put"
       end
       # verify the required parameter 'rule_id' is set
       if @api_client.config.client_side_validation && rule_id.nil?
@@ -338,14 +337,13 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
 
       # form parameters
       form_params = {}
-      form_params['strip-string'] = strip_string
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(url)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

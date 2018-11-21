@@ -98,7 +98,7 @@ describe 'SMSApi' do
   # unit tests for sms_inbound_post
   # Create inbound sms
   # Create inbound sms
-  # @param url Your url.
+  # @param url Url model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'sms_inbound_post test' do
@@ -159,7 +159,7 @@ describe 'SMSApi' do
   # unit tests for sms_receipts_post
   # Add a delivery receipt
   # Add a delivery receipt
-  # @param url Your url.
+  # @param url Url model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'sms_receipts_post test' do

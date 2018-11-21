@@ -231,26 +231,22 @@ module ClickSendClient
     end
     # Forgot password
     # Forgot password
-    # @param username Username belonging to account.
     # @param [Hash] opts the optional parameters
+    # @option opts [ForgotPassword] :forgot_password 
     # @return [String]
-    def forgot_password_put(username, opts = {})
-      data, _status_code, _headers = forgot_password_put_with_http_info(username, opts)
+    def forgot_password_put(opts = {})
+      data, _status_code, _headers = forgot_password_put_with_http_info(opts)
       data
     end
 
     # Forgot password
     # Forgot password
-    # @param username Username belonging to account.
     # @param [Hash] opts the optional parameters
+    # @option opts [ForgotPassword] :forgot_password 
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def forgot_password_put_with_http_info(username, opts = {})
+    def forgot_password_put_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AccountApi.forgot_password_put ...'
-      end
-      # verify the required parameter 'username' is set
-      if @api_client.config.client_side_validation && username.nil?
-        fail ArgumentError, "Missing the required parameter 'username' when calling AccountApi.forgot_password_put"
       end
       # resource path
       local_var_path = '/forgot-password'
@@ -263,14 +259,13 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
 
       # form parameters
       form_params = {}
-      form_params['username'] = username
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(opts[:'forgot_password'])
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -341,8 +336,7 @@ module ClickSendClient
     # Forgot username
     # Forgot username
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :email Email belonging to account.
-    # @option opts [String] :phone_number Phone number belonging to account.
+    # @option opts [ForgotUsername] :forgot_username 
     # @return [String]
     def forgot_username_put(opts = {})
       data, _status_code, _headers = forgot_username_put_with_http_info(opts)
@@ -352,8 +346,7 @@ module ClickSendClient
     # Forgot username
     # Forgot username
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :email Email belonging to account.
-    # @option opts [String] :phone_number Phone number belonging to account.
+    # @option opts [ForgotUsername] :forgot_username 
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def forgot_username_put_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -370,15 +363,13 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
 
       # form parameters
       form_params = {}
-      form_params['email'] = opts[:'email'] if !opts[:'email'].nil?
-      form_params['phone_number'] = opts[:'phone_number'] if !opts[:'phone_number'].nil?
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(opts[:'forgot_username'])
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

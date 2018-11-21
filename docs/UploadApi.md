@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **uploads_post**
-> String uploads_post(content, convert)
+> String uploads_post(convert, opts)
 
 Upload File
 
@@ -27,14 +27,15 @@ end
 
 api_instance = ClickSendClient::UploadApi.new
 
-content = 'content_example' # String | Your base64 encoded file.
-
 convert = 'convert_example' # String | 
 
+opts = { 
+  upload_file: ClickSendClient::UploadFile.new # UploadFile | 
+}
 
 begin
   #Upload File
-  result = api_instance.uploads_post(content, convert)
+  result = api_instance.uploads_post(convert, opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling UploadApi->uploads_post: #{e}"
@@ -45,8 +46,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **String**| Your base64 encoded file. | 
  **convert** | **String**|  | 
+ **upload_file** | [**UploadFile**](UploadFile.md)|  | [optional] 
 
 ### Return type
 
@@ -58,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

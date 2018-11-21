@@ -82,8 +82,8 @@ describe 'AccountApi' do
   # unit tests for forgot_password_put
   # Forgot password
   # Forgot password
-  # @param username Username belonging to account.
   # @param [Hash] opts the optional parameters
+  # @option opts [ForgotPassword] :forgot_password 
   # @return [String]
   describe 'forgot_password_put test' do
     it 'should work' do
@@ -107,8 +107,7 @@ describe 'AccountApi' do
   # Forgot username
   # Forgot username
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :email Email belonging to account.
-  # @option opts [String] :phone_number Phone number belonging to account.
+  # @option opts [ForgotUsername] :forgot_username 
   # @return [String]
   describe 'forgot_username_put test' do
     it 'should work' do

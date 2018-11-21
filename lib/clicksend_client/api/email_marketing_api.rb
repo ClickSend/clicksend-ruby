@@ -83,26 +83,22 @@ module ClickSendClient
     end
     # Create allowed Email Address
     # Create allowed Email Address
-    # @param email_address Email to be allowed.
     # @param [Hash] opts the optional parameters
+    # @option opts [EmailAddress] :email_address 
     # @return [String]
-    def allowed_email_address_post(email_address, opts = {})
-      data, _status_code, _headers = allowed_email_address_post_with_http_info(email_address, opts)
+    def allowed_email_address_post(opts = {})
+      data, _status_code, _headers = allowed_email_address_post_with_http_info(opts)
       data
     end
 
     # Create allowed Email Address
     # Create allowed Email Address
-    # @param email_address Email to be allowed.
     # @param [Hash] opts the optional parameters
+    # @option opts [EmailAddress] :email_address 
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def allowed_email_address_post_with_http_info(email_address, opts = {})
+    def allowed_email_address_post_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EmailMarketingApi.allowed_email_address_post ...'
-      end
-      # verify the required parameter 'email_address' is set
-      if @api_client.config.client_side_validation && email_address.nil?
-        fail ArgumentError, "Missing the required parameter 'email_address' when calling EmailMarketingApi.allowed_email_address_post"
       end
       # resource path
       local_var_path = '/email/addresses'
@@ -115,14 +111,13 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
 
       # form parameters
       form_params = {}
-      form_params['email_address'] = email_address
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(opts[:'email_address'])
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

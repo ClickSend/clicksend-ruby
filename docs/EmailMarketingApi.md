@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 
 # **allowed_email_address_post**
-> String allowed_email_address_post(email_address)
+> String allowed_email_address_post(opts)
 
 Create allowed Email Address
 
@@ -96,12 +96,13 @@ end
 
 api_instance = ClickSendClient::EmailMarketingApi.new
 
-email_address = 'email_address_example' # String | Email to be allowed.
-
+opts = { 
+  email_address: ClickSendClient::EmailAddress.new # EmailAddress | 
+}
 
 begin
   #Create allowed Email Address
-  result = api_instance.allowed_email_address_post(email_address)
+  result = api_instance.allowed_email_address_post(opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailMarketingApi->allowed_email_address_post: #{e}"
@@ -112,7 +113,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email_address** | **String**| Email to be allowed. | 
+ **email_address** | [**EmailAddress**](EmailAddress.md)|  | [optional] 
 
 ### Return type
 
@@ -124,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

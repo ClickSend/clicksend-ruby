@@ -48,8 +48,8 @@ describe 'EmailMarketingApi' do
   # unit tests for allowed_email_address_post
   # Create allowed Email Address
   # Create allowed Email Address
-  # @param email_address Email to be allowed.
   # @param [Hash] opts the optional parameters
+  # @option opts [EmailAddress] :email_address 
   # @return [String]
   describe 'allowed_email_address_post test' do
     it 'should work' do

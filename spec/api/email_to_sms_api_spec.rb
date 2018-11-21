@@ -84,7 +84,7 @@ describe 'EmailToSmsApi' do
   # unit tests for sms_email_sms_stripped_string_post
   # Create email to sms stripped string rule
   # Create email to sms stripped string rules
-  # @param strip_string String to be stripped.
+  # @param stripped_string StrippedString model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'sms_email_sms_stripped_string_post test' do
@@ -96,7 +96,7 @@ describe 'EmailToSmsApi' do
   # unit tests for sms_email_sms_stripped_string_put
   # Update email to sms stripped string rule
   # Update email to sms stripped string rule
-  # @param strip_string String to be stripped.
+  # @param url Url model
   # @param rule_id Your rule id
   # @param [Hash] opts the optional parameters
   # @return [String]

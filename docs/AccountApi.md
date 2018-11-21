@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 
 # **forgot_password_put**
-> String forgot_password_put(username)
+> String forgot_password_put(opts)
 
 Forgot password
 
@@ -239,12 +239,13 @@ end
 
 api_instance = ClickSendClient::AccountApi.new
 
-username = 'username_example' # String | Username belonging to account.
-
+opts = { 
+  forgot_password: ClickSendClient::ForgotPassword.new # ForgotPassword | 
+}
 
 begin
   #Forgot password
-  result = api_instance.forgot_password_put(username)
+  result = api_instance.forgot_password_put(opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountApi->forgot_password_put: #{e}"
@@ -255,7 +256,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **String**| Username belonging to account. | 
+ **forgot_password** | [**ForgotPassword**](ForgotPassword.md)|  | [optional] 
 
 ### Return type
 
@@ -267,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -340,8 +341,7 @@ require 'clicksend_client'
 api_instance = ClickSendClient::AccountApi.new
 
 opts = { 
-  email: 'email_example', # String | Email belonging to account.
-  phone_number: 'phone_number_example' # String | Phone number belonging to account.
+  forgot_username: ClickSendClient::ForgotUsername.new # ForgotUsername | 
 }
 
 begin
@@ -357,8 +357,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**| Email belonging to account. | [optional] 
- **phone_number** | **String**| Phone number belonging to account. | [optional] 
+ **forgot_username** | [**ForgotUsername**](ForgotUsername.md)|  | [optional] 
 
 ### Return type
 
@@ -370,7 +369,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
