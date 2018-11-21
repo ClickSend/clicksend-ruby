@@ -239,7 +239,7 @@ end
 
 api_instance = ClickSendClient::AccountApi.new
 
-username = 'username_example' # String | Username belonging to account
+username = 'username_example' # String | Username belonging to account.
 
 
 begin
@@ -255,7 +255,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **String**| Username belonging to account | 
+ **username** | **String**| Username belonging to account. | 
 
 ### Return type
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 
 # **forgot_username_put**
-> String forgot_username_put(email)
+> String forgot_username_put(opts)
 
 Forgot username
 
@@ -339,12 +339,14 @@ require 'clicksend_client'
 
 api_instance = ClickSendClient::AccountApi.new
 
-email = 'email_example' # String | Email belonging to account
-
+opts = { 
+  email: 'email_example', # String | Email belonging to account.
+  phone_number: 'phone_number_example' # String | Phone number belonging to account.
+}
 
 begin
   #Forgot username
-  result = api_instance.forgot_username_put(email)
+  result = api_instance.forgot_username_put(opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling AccountApi->forgot_username_put: #{e}"
@@ -355,7 +357,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**| Email belonging to account | 
+ **email** | **String**| Email belonging to account. | [optional] 
+ **phone_number** | **String**| Phone number belonging to account. | [optional] 
 
 ### Return type
 
@@ -367,7 +370,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 

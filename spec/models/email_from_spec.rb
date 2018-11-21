@@ -32,7 +32,7 @@ describe 'EmailFrom' do
       expect(@instance).to be_instance_of(ClickSendClient::EmailFrom)
     end
   end
-  describe 'test attribute "email"' do
+  describe 'test attribute "email_address_id"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -13,27 +13,97 @@ ClickSend Codegen version: 2.4.0-SNAPSHOT
 require 'date'
 
 module ClickSendClient
-  # Email being sent from
-  class EmailFrom
-    # Email address id of the recipient.
-    attr_accessor :email_address_id
+  # Contains all details for the main contact.
+  class Fields
+    # Your phone number in E.164 format. Must be provided if no fax number or email.
+    attr_accessor :phone_number
 
-    # Name of the recipient.
-    attr_accessor :name
+    # 
+    attr_accessor :custom_1
+
+    # Your email. Must be provided if no phone number or fax number.
+    attr_accessor :email
+
+    # Your fax number. Must be provided if no phone number or email.
+    attr_accessor :fax_number
+
+    # Your first name.
+    attr_accessor :first_name
+
+    # Your street address
+    attr_accessor :address_line_1
+
+    # 
+    attr_accessor :address_line_2
+
+    # Your nearest city
+    attr_accessor :address_city
+
+    # Your current state
+    attr_accessor :address_state
+
+    # Your current postcode
+    attr_accessor :address_postal_code
+
+    # Your current country
+    attr_accessor :address_country
+
+    # Your organisation name
+    attr_accessor :organization_name
+
+    # 
+    attr_accessor :custom_2
+
+    # 
+    attr_accessor :custom_3
+
+    # 
+    attr_accessor :custom_4
+
+    # Your last name
+    attr_accessor :last_name
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'email_address_id' => :'email_address_id',
-        :'name' => :'name'
+        :'phone_number' => :'phone_number',
+        :'custom_1' => :'custom_1',
+        :'email' => :'email',
+        :'fax_number' => :'fax_number',
+        :'first_name' => :'first_name',
+        :'address_line_1' => :'address_line_1',
+        :'address_line_2' => :'address_line_2',
+        :'address_city' => :'address_city',
+        :'address_state' => :'address_state',
+        :'address_postal_code' => :'address_postal_code',
+        :'address_country' => :'address_country',
+        :'organization_name' => :'organization_name',
+        :'custom_2' => :'custom_2',
+        :'custom_3' => :'custom_3',
+        :'custom_4' => :'custom_4',
+        :'last_name' => :'last_name'
       }
     end
 
     # Attribute type mapping.
     def self.clicksend_types
       {
-        :'email_address_id' => :'String',
-        :'name' => :'String'
+        :'phone_number' => :'String',
+        :'custom_1' => :'String',
+        :'email' => :'String',
+        :'fax_number' => :'String',
+        :'first_name' => :'String',
+        :'address_line_1' => :'String',
+        :'address_line_2' => :'String',
+        :'address_city' => :'String',
+        :'address_state' => :'String',
+        :'address_postal_code' => :'String',
+        :'address_country' => :'String',
+        :'organization_name' => :'String',
+        :'custom_2' => :'String',
+        :'custom_3' => :'String',
+        :'custom_4' => :'String',
+        :'last_name' => :'String'
       }
     end
 
@@ -45,12 +115,68 @@ module ClickSendClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'email_address_id')
-        self.email_address_id = attributes[:'email_address_id']
+      if attributes.has_key?(:'phone_number')
+        self.phone_number = attributes[:'phone_number']
       end
 
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'custom_1')
+        self.custom_1 = attributes[:'custom_1']
+      end
+
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
+      end
+
+      if attributes.has_key?(:'fax_number')
+        self.fax_number = attributes[:'fax_number']
+      end
+
+      if attributes.has_key?(:'first_name')
+        self.first_name = attributes[:'first_name']
+      end
+
+      if attributes.has_key?(:'address_line_1')
+        self.address_line_1 = attributes[:'address_line_1']
+      end
+
+      if attributes.has_key?(:'address_line_2')
+        self.address_line_2 = attributes[:'address_line_2']
+      end
+
+      if attributes.has_key?(:'address_city')
+        self.address_city = attributes[:'address_city']
+      end
+
+      if attributes.has_key?(:'address_state')
+        self.address_state = attributes[:'address_state']
+      end
+
+      if attributes.has_key?(:'address_postal_code')
+        self.address_postal_code = attributes[:'address_postal_code']
+      end
+
+      if attributes.has_key?(:'address_country')
+        self.address_country = attributes[:'address_country']
+      end
+
+      if attributes.has_key?(:'organization_name')
+        self.organization_name = attributes[:'organization_name']
+      end
+
+      if attributes.has_key?(:'custom_2')
+        self.custom_2 = attributes[:'custom_2']
+      end
+
+      if attributes.has_key?(:'custom_3')
+        self.custom_3 = attributes[:'custom_3']
+      end
+
+      if attributes.has_key?(:'custom_4')
+        self.custom_4 = attributes[:'custom_4']
+      end
+
+      if attributes.has_key?(:'last_name')
+        self.last_name = attributes[:'last_name']
       end
     end
 
@@ -58,17 +184,12 @@ module ClickSendClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @email_address_id.nil?
-        invalid_properties.push('invalid value for "email_address_id", email_address_id cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @email_address_id.nil?
       true
     end
 
@@ -77,8 +198,22 @@ module ClickSendClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          email_address_id == o.email_address_id &&
-          name == o.name
+          phone_number == o.phone_number &&
+          custom_1 == o.custom_1 &&
+          email == o.email &&
+          fax_number == o.fax_number &&
+          first_name == o.first_name &&
+          address_line_1 == o.address_line_1 &&
+          address_line_2 == o.address_line_2 &&
+          address_city == o.address_city &&
+          address_state == o.address_state &&
+          address_postal_code == o.address_postal_code &&
+          address_country == o.address_country &&
+          organization_name == o.organization_name &&
+          custom_2 == o.custom_2 &&
+          custom_3 == o.custom_3 &&
+          custom_4 == o.custom_4 &&
+          last_name == o.last_name
     end
 
     # @see the `==` method
@@ -90,7 +225,7 @@ module ClickSendClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email_address_id, name].hash
+      [phone_number, custom_1, email, fax_number, first_name, address_line_1, address_line_2, address_city, address_state, address_postal_code, address_country, organization_name, custom_2, custom_3, custom_4, last_name].hash
     end
 
     # Builds the object from hash

@@ -366,25 +366,31 @@ module ClickSendClient
     # Remove duplicate contacts
     # Remove duplicate contacts
     # @param list_id Your list id
+    # @param fields Fields model
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def lists_remove_duplicates_by_list_id_put(list_id, opts = {})
-      data, _status_code, _headers = lists_remove_duplicates_by_list_id_put_with_http_info(list_id, opts)
+    def lists_remove_duplicates_by_list_id_put(list_id, fields, opts = {})
+      data, _status_code, _headers = lists_remove_duplicates_by_list_id_put_with_http_info(list_id, fields, opts)
       data
     end
 
     # Remove duplicate contacts
     # Remove duplicate contacts
     # @param list_id Your list id
+    # @param fields Fields model
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def lists_remove_duplicates_by_list_id_put_with_http_info(list_id, opts = {})
+    def lists_remove_duplicates_by_list_id_put_with_http_info(list_id, fields, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ContactListApi.lists_remove_duplicates_by_list_id_put ...'
       end
       # verify the required parameter 'list_id' is set
       if @api_client.config.client_side_validation && list_id.nil?
         fail ArgumentError, "Missing the required parameter 'list_id' when calling ContactListApi.lists_remove_duplicates_by_list_id_put"
+      end
+      # verify the required parameter 'fields' is set
+      if @api_client.config.client_side_validation && fields.nil?
+        fail ArgumentError, "Missing the required parameter 'fields' when calling ContactListApi.lists_remove_duplicates_by_list_id_put"
       end
       # resource path
       local_var_path = '/lists/{list_id}/remove-duplicates'.sub('{' + 'list_id' + '}', list_id.to_s)
@@ -403,7 +409,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = nil
+      post_body = @api_client.object_to_http_body(fields)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

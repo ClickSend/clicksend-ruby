@@ -308,7 +308,7 @@ module ClickSendClient
     end
     # Create inbound sms
     # Create inbound sms
-    # @param url Your url
+    # @param url Your url.
     # @param [Hash] opts the optional parameters
     # @return [String]
     def sms_inbound_post(url, opts = {})
@@ -318,7 +318,7 @@ module ClickSendClient
 
     # Create inbound sms
     # Create inbound sms
-    # @param url Your url
+    # @param url Your url.
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def sms_inbound_post_with_http_info(url, opts = {})
@@ -340,13 +340,14 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
 
       # form parameters
       form_params = {}
+      form_params['url'] = url
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(url)
+      post_body = nil
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
@@ -582,7 +583,7 @@ module ClickSendClient
     end
     # Add a delivery receipt
     # Add a delivery receipt
-    # @param url Your url
+    # @param url Your url.
     # @param [Hash] opts the optional parameters
     # @return [String]
     def sms_receipts_post(url, opts = {})
@@ -592,7 +593,7 @@ module ClickSendClient
 
     # Add a delivery receipt
     # Add a delivery receipt
-    # @param url Your url
+    # @param url Your url.
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def sms_receipts_post_with_http_info(url, opts = {})
@@ -614,13 +615,14 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
 
       # form parameters
       form_params = {}
+      form_params['url'] = url
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(url)
+      post_body = nil
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

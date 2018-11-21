@@ -115,13 +115,14 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
 
       # form parameters
       form_params = {}
+      form_params['email_address'] = email_address
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(email_address)
+      post_body = nil
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

@@ -35,7 +35,7 @@ describe 'UploadApi' do
   # unit tests for uploads_post
   # Upload File
   # Upload File
-  # @param content Base64-encoded file contents
+  # @param content Your base64 encoded file.
   # @param convert 
   # @param [Hash] opts the optional parameters
   # @return [String]

@@ -27,7 +27,7 @@ end
 
 api_instance = ClickSendClient::UploadApi.new
 
-content = 'content_example' # String | Base64-encoded file contents
+content = 'content_example' # String | Your base64 encoded file.
 
 convert = 'convert_example' # String | 
 
@@ -45,7 +45,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **String**| Base64-encoded file contents | 
+ **content** | **String**| Your base64 encoded file. | 
  **convert** | **String**|  | 
 
 ### Return type
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 

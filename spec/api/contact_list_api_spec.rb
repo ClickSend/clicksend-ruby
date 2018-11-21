@@ -111,6 +111,7 @@ describe 'ContactListApi' do
   # Remove duplicate contacts
   # Remove duplicate contacts
   # @param list_id Your list id
+  # @param fields Fields model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'lists_remove_duplicates_by_list_id_put test' do

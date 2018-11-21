@@ -21,7 +21,7 @@ module ClickSendClient
     end
     # Upload File
     # Upload File
-    # @param content Base64-encoded file contents
+    # @param content Your base64 encoded file.
     # @param convert 
     # @param [Hash] opts the optional parameters
     # @return [String]
@@ -32,7 +32,7 @@ module ClickSendClient
 
     # Upload File
     # Upload File
-    # @param content Base64-encoded file contents
+    # @param content Your base64 encoded file.
     # @param convert 
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -60,13 +60,14 @@ module ClickSendClient
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
 
       # form parameters
       form_params = {}
+      form_params['content'] = content
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(content)
+      post_body = nil
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

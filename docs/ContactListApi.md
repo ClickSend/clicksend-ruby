@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 
 # **lists_remove_duplicates_by_list_id_put**
-> String lists_remove_duplicates_by_list_id_put(list_id)
+> String lists_remove_duplicates_by_list_id_put(list_id, fields)
 
 Remove duplicate contacts
 
@@ -362,10 +362,12 @@ api_instance = ClickSendClient::ContactListApi.new
 
 list_id = 56 # Integer | Your list id
 
+fields = ClickSendClient::Fields.new # Fields | Fields model
+
 
 begin
   #Remove duplicate contacts
-  result = api_instance.lists_remove_duplicates_by_list_id_put(list_id)
+  result = api_instance.lists_remove_duplicates_by_list_id_put(list_id, fields)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactListApi->lists_remove_duplicates_by_list_id_put: #{e}"
@@ -377,6 +379,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list_id** | **Integer**| Your list id | 
+ **fields** | [**Fields**](Fields.md)| Fields model | 
 
 ### Return type
 
