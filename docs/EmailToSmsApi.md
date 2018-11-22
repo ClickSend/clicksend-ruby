@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 
 # **sms_email_sms_stripped_string_put**
-> String sms_email_sms_stripped_string_put(url, rule_id)
+> String sms_email_sms_stripped_string_put(stripped_string, rule_id)
 
 Update email to sms stripped string rule
 
@@ -301,14 +301,14 @@ end
 
 api_instance = ClickSendClient::EmailToSmsApi.new
 
-url = ClickSendClient::Url.new # Url | Url model
+stripped_string = ClickSendClient::StrippedString.new # StrippedString | StrippedString model
 
 rule_id = 56 # Integer | Your rule id
 
 
 begin
   #Update email to sms stripped string rule
-  result = api_instance.sms_email_sms_stripped_string_put(url, rule_id)
+  result = api_instance.sms_email_sms_stripped_string_put(stripped_string, rule_id)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailToSmsApi->sms_email_sms_stripped_string_put: #{e}"
@@ -319,7 +319,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model | 
+ **stripped_string** | [**StrippedString**](StrippedString.md)| StrippedString model | 
  **rule_id** | **Integer**| Your rule id | 
 
 ### Return type

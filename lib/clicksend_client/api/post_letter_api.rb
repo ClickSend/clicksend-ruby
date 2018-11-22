@@ -43,7 +43,7 @@ module ClickSendClient
         fail ArgumentError, "Missing the required parameter 'filename' when calling PostLetterApi.post_letters_export_get"
       end
       # resource path
-      local_var_path = '/post/letters/export'
+      local_var_path = '/post/letters/history/export'
 
       # query parameters
       query_params = {}

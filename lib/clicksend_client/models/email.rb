@@ -24,7 +24,6 @@ module ClickSendClient
     # Array of Bcc Recipient items.
     attr_accessor :bcc
 
-    # From Email object.
     attr_accessor :from
 
     # Subject of the email.
@@ -59,7 +58,7 @@ module ClickSendClient
         :'to' => :'Array<EmailRecipient>',
         :'cc' => :'Array<EmailRecipient>',
         :'bcc' => :'Array<EmailRecipient>',
-        :'from' => :'Array<EmailFrom>',
+        :'from' => :'EmailFrom',
         :'subject' => :'String',
         :'body' => :'String',
         :'attachments' => :'Array<Attachment>',
@@ -94,9 +93,7 @@ module ClickSendClient
       end
 
       if attributes.has_key?(:'from')
-        if (value = attributes[:'from']).is_a?(Array)
-          self.from = value
-        end
+        self.from = attributes[:'from']
       end
 
       if attributes.has_key?(:'subject')

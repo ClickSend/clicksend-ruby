@@ -13,27 +13,22 @@ ClickSend Codegen version: 2.4.0-SNAPSHOT
 require 'date'
 
 module ClickSendClient
-  # From Email object.
-  class EmailFrom
-    # Email address id of the recipient.
-    attr_accessor :email_address_id
-
-    # Name of the recipient.
-    attr_accessor :name
+  # Your list.
+  class List
+    # Your list name.
+    attr_accessor :list_name
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'email_address_id' => :'email_address_id',
-        :'name' => :'name'
+        :'list_name' => :'list_name'
       }
     end
 
     # Attribute type mapping.
     def self.clicksend_types
       {
-        :'email_address_id' => :'String',
-        :'name' => :'String'
+        :'list_name' => :'String'
       }
     end
 
@@ -45,12 +40,8 @@ module ClickSendClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'email_address_id')
-        self.email_address_id = attributes[:'email_address_id']
-      end
-
-      if attributes.has_key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.has_key?(:'list_name')
+        self.list_name = attributes[:'list_name']
       end
     end
 
@@ -58,8 +49,8 @@ module ClickSendClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @email_address_id.nil?
-        invalid_properties.push('invalid value for "email_address_id", email_address_id cannot be nil.')
+      if @list_name.nil?
+        invalid_properties.push('invalid value for "list_name", list_name cannot be nil.')
       end
 
       invalid_properties
@@ -68,7 +59,7 @@ module ClickSendClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @email_address_id.nil?
+      return false if @list_name.nil?
       true
     end
 
@@ -77,8 +68,7 @@ module ClickSendClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          email_address_id == o.email_address_id &&
-          name == o.name
+          list_name == o.list_name
     end
 
     # @see the `==` method
@@ -90,7 +80,7 @@ module ClickSendClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [email_address_id, name].hash
+      [list_name].hash
     end
 
     # Builds the object from hash

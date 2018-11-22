@@ -299,28 +299,28 @@ module ClickSendClient
     end
     # Update email to sms stripped string rule
     # Update email to sms stripped string rule
-    # @param url Url model
+    # @param stripped_string StrippedString model
     # @param rule_id Your rule id
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def sms_email_sms_stripped_string_put(url, rule_id, opts = {})
-      data, _status_code, _headers = sms_email_sms_stripped_string_put_with_http_info(url, rule_id, opts)
+    def sms_email_sms_stripped_string_put(stripped_string, rule_id, opts = {})
+      data, _status_code, _headers = sms_email_sms_stripped_string_put_with_http_info(stripped_string, rule_id, opts)
       data
     end
 
     # Update email to sms stripped string rule
     # Update email to sms stripped string rule
-    # @param url Url model
+    # @param stripped_string StrippedString model
     # @param rule_id Your rule id
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def sms_email_sms_stripped_string_put_with_http_info(url, rule_id, opts = {})
+    def sms_email_sms_stripped_string_put_with_http_info(stripped_string, rule_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EmailToSmsApi.sms_email_sms_stripped_string_put ...'
       end
-      # verify the required parameter 'url' is set
-      if @api_client.config.client_side_validation && url.nil?
-        fail ArgumentError, "Missing the required parameter 'url' when calling EmailToSmsApi.sms_email_sms_stripped_string_put"
+      # verify the required parameter 'stripped_string' is set
+      if @api_client.config.client_side_validation && stripped_string.nil?
+        fail ArgumentError, "Missing the required parameter 'stripped_string' when calling EmailToSmsApi.sms_email_sms_stripped_string_put"
       end
       # verify the required parameter 'rule_id' is set
       if @api_client.config.client_side_validation && rule_id.nil?
@@ -343,7 +343,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(url)
+      post_body = @api_client.object_to_http_body(stripped_string)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,

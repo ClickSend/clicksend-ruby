@@ -130,21 +130,21 @@ module ClickSendClient
     # Update specific contact list
     # Update specific contact list
     # @param list_id Your list id
-    # @param list_name Your new list name
+    # @param list List model
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def lists_by_list_id_put(list_id, list_name, opts = {})
-      data, _status_code, _headers = lists_by_list_id_put_with_http_info(list_id, list_name, opts)
+    def lists_by_list_id_put(list_id, list, opts = {})
+      data, _status_code, _headers = lists_by_list_id_put_with_http_info(list_id, list, opts)
       data
     end
 
     # Update specific contact list
     # Update specific contact list
     # @param list_id Your list id
-    # @param list_name Your new list name
+    # @param list List model
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def lists_by_list_id_put_with_http_info(list_id, list_name, opts = {})
+    def lists_by_list_id_put_with_http_info(list_id, list, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ContactListApi.lists_by_list_id_put ...'
       end
@@ -152,9 +152,9 @@ module ClickSendClient
       if @api_client.config.client_side_validation && list_id.nil?
         fail ArgumentError, "Missing the required parameter 'list_id' when calling ContactListApi.lists_by_list_id_put"
       end
-      # verify the required parameter 'list_name' is set
-      if @api_client.config.client_side_validation && list_name.nil?
-        fail ArgumentError, "Missing the required parameter 'list_name' when calling ContactListApi.lists_by_list_id_put"
+      # verify the required parameter 'list' is set
+      if @api_client.config.client_side_validation && list.nil?
+        fail ArgumentError, "Missing the required parameter 'list' when calling ContactListApi.lists_by_list_id_put"
       end
       # resource path
       local_var_path = '/lists/{list_id}'.sub('{' + 'list_id' + '}', list_id.to_s)
@@ -173,7 +173,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(list_name)
+      post_body = @api_client.object_to_http_body(list)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
@@ -311,26 +311,26 @@ module ClickSendClient
     end
     # Create new contact list
     # Create new contact list
-    # @param list_name Your contact list name
+    # @param list List model
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def lists_post(list_name, opts = {})
-      data, _status_code, _headers = lists_post_with_http_info(list_name, opts)
+    def lists_post(list, opts = {})
+      data, _status_code, _headers = lists_post_with_http_info(list, opts)
       data
     end
 
     # Create new contact list
     # Create new contact list
-    # @param list_name Your contact list name
+    # @param list List model
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def lists_post_with_http_info(list_name, opts = {})
+    def lists_post_with_http_info(list, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ContactListApi.lists_post ...'
       end
-      # verify the required parameter 'list_name' is set
-      if @api_client.config.client_side_validation && list_name.nil?
-        fail ArgumentError, "Missing the required parameter 'list_name' when calling ContactListApi.lists_post"
+      # verify the required parameter 'list' is set
+      if @api_client.config.client_side_validation && list.nil?
+        fail ArgumentError, "Missing the required parameter 'list' when calling ContactListApi.lists_post"
       end
       # resource path
       local_var_path = '/lists'
@@ -349,7 +349,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(list_name)
+      post_body = @api_client.object_to_http_body(list)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

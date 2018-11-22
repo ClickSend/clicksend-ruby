@@ -21,7 +21,7 @@ module ClickSendClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'strip_string' => :'strip-string'
+        :'strip_string' => :'strip_string'
       }
     end
 
@@ -40,8 +40,8 @@ module ClickSendClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'strip-string')
-        self.strip_string = attributes[:'strip-string']
+      if attributes.has_key?(:'strip_string')
+        self.strip_string = attributes[:'strip_string']
       end
     end
 

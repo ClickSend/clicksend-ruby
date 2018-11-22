@@ -60,7 +60,7 @@ describe 'ContactListApi' do
   # Update specific contact list
   # Update specific contact list
   # @param list_id Your list id
-  # @param list_name Your new list name
+  # @param list List model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'lists_by_list_id_put test' do
@@ -98,7 +98,7 @@ describe 'ContactListApi' do
   # unit tests for lists_post
   # Create new contact list
   # Create new contact list
-  # @param list_name Your contact list name
+  # @param list List model
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'lists_post test' do
