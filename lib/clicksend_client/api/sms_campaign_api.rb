@@ -43,7 +43,7 @@ module ClickSendClient
         fail ArgumentError, "Missing the required parameter 'sms_campaign_id' when calling SmsCampaignApi.sms_campaign_by_sms_campaign_id_get"
       end
       # resource path
-      local_var_path = '/sms-campaign/{sms_campaign_id}'.sub('{' + 'sms_campaign_id' + '}', sms_campaign_id.to_s)
+      local_var_path = '/sms-campaigns/{sms_campaign_id}'.sub('{' + 'sms_campaign_id' + '}', sms_campaign_id.to_s)
 
       # query parameters
       query_params = {}

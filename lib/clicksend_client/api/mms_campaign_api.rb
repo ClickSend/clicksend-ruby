@@ -43,7 +43,7 @@ module ClickSendClient
         fail ArgumentError, "Missing the required parameter 'mms_campaign_id' when calling MmsCampaignApi.mms_campaign_by_mms_campaign_id_get"
       end
       # resource path
-      local_var_path = '/mms-campaign/{mms_campaign_id}'.sub('{' + 'mms_campaign_id' + '}', mms_campaign_id.to_s)
+      local_var_path = '/mms-campaigns/{mms_campaign_id}'.sub('{' + 'mms_campaign_id' + '}', mms_campaign_id.to_s)
 
       # query parameters
       query_params = {}
