@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **uploads_post**
-> String uploads_post(convert, opts)
+> String uploads_post(upload_file, convert)
 
 Upload File
 
@@ -27,15 +27,14 @@ end
 
 api_instance = ClickSendClient::UploadApi.new
 
+upload_file = ClickSendClient::UploadFile.new # UploadFile | Your file to be uploaded
+
 convert = 'convert_example' # String | 
 
-opts = { 
-  upload_file: ClickSendClient::UploadFile.new # UploadFile | 
-}
 
 begin
   #Upload File
-  result = api_instance.uploads_post(convert, opts)
+  result = api_instance.uploads_post(upload_file, convert)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling UploadApi->uploads_post: #{e}"
@@ -46,8 +45,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **upload_file** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
  **convert** | **String**|  | 
- **upload_file** | [**UploadFile**](UploadFile.md)|  | [optional] 
 
 ### Return type
 

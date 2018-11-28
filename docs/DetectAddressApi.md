@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **detect_address_post**
-> String detect_address_post(content)
+> String detect_address_post(upload_file)
 
 Detects address in uploaded file.
 
@@ -27,12 +27,12 @@ end
 
 api_instance = ClickSendClient::DetectAddressApi.new
 
-content = 'content_example' # String | Base64-encoded file contents
+upload_file = ClickSendClient::UploadFile.new # UploadFile | Your file to be uploaded
 
 
 begin
   #Detects address in uploaded file.
-  result = api_instance.detect_address_post(content)
+  result = api_instance.detect_address_post(upload_file)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling DetectAddressApi->detect_address_post: #{e}"
@@ -43,7 +43,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **String**| Base64-encoded file contents | 
+ **upload_file** | [**UploadFile**](UploadFile.md)| Your file to be uploaded | 
 
 ### Return type
 

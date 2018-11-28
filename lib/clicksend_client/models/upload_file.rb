@@ -13,8 +13,9 @@ ClickSend Codegen version: 2.4.0-SNAPSHOT
 require 'date'
 
 module ClickSendClient
+  # Your file to be uploaded.
   class UploadFile
-    # Your base64 encoded file.
+    # Your base64 encoded file string.
     attr_accessor :content
 
     # Attribute mapping from ruby-style variable name to JSON key.

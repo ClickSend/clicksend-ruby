@@ -35,9 +35,9 @@ describe 'UploadApi' do
   # unit tests for uploads_post
   # Upload File
   # Upload File
+  # @param upload_file Your file to be uploaded
   # @param convert 
   # @param [Hash] opts the optional parameters
-  # @option opts [UploadFile] :upload_file 
   # @return [String]
   describe 'uploads_post test' do
     it 'should work' do
