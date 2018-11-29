@@ -131,10 +131,6 @@ module ClickSendClient
         invalid_properties.push('invalid value for "address_line_1", address_line_1 cannot be nil.')
       end
 
-      if @address_line_2.nil?
-        invalid_properties.push('invalid value for "address_line_2", address_line_2 cannot be nil.')
-      end
-
       if @address_city.nil?
         invalid_properties.push('invalid value for "address_city", address_city cannot be nil.')
       end
@@ -163,7 +159,6 @@ module ClickSendClient
     def valid?
       return false if @address_name.nil?
       return false if @address_line_1.nil?
-      return false if @address_line_2.nil?
       return false if @address_city.nil?
       return false if @address_state.nil?
       return false if @address_postal_code.nil?
