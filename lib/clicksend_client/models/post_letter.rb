@@ -30,6 +30,9 @@ module ClickSendClient
     # Whether letter is in colour
     attr_accessor :colour
 
+    # Whether letter is priority
+    attr_accessor :priority_post
+
     # Source being sent from
     attr_accessor :source
 
@@ -41,6 +44,7 @@ module ClickSendClient
         :'template_used' => :'template_used',
         :'duplex' => :'duplex',
         :'colour' => :'colour',
+        :'priority_post' => :'priority_post',
         :'source' => :'source'
       }
     end
@@ -53,6 +57,7 @@ module ClickSendClient
         :'template_used' => :'Integer',
         :'duplex' => :'Integer',
         :'colour' => :'Integer',
+        :'priority_post' => :'Integer',
         :'source' => :'String'
       }
     end
@@ -91,6 +96,12 @@ module ClickSendClient
         self.colour = attributes[:'colour']
       else
         self.colour = 0
+      end
+
+      if attributes.has_key?(:'priority_post')
+        self.priority_post = attributes[:'priority_post']
+      else
+        self.priority_post = 0
       end
 
       if attributes.has_key?(:'source')
@@ -133,6 +144,7 @@ module ClickSendClient
           template_used == o.template_used &&
           duplex == o.duplex &&
           colour == o.colour &&
+          priority_post == o.priority_post &&
           source == o.source
     end
 
@@ -145,7 +157,7 @@ module ClickSendClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [file_url, recipients, template_used, duplex, colour, source].hash
+      [file_url, recipients, template_used, duplex, colour, priority_post, source].hash
     end
 
     # Builds the object from hash
