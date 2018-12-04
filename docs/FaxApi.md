@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 
 # **fax_receipts_get**
-> String fax_receipts_get
+> String fax_receipts_get(q, opts)
 
 Get List of Fax Receipts
 
@@ -201,9 +201,16 @@ end
 
 api_instance = ClickSendClient::FaxApi.new
 
+q = 'q_example' # String | Your keyword or query.
+
+opts = { 
+  page: 1, # Integer | Page number
+  limit: 10 # Integer | Number of records per page
+}
+
 begin
   #Get List of Fax Receipts
-  result = api_instance.fax_receipts_get
+  result = api_instance.fax_receipts_get(q, opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling FaxApi->fax_receipts_get: #{e}"
@@ -211,7 +218,12 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. | 
+ **page** | **Integer**| Page number | [optional] [default to 1]
+ **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

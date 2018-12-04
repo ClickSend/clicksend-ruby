@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 
 # **lists_contacts_by_list_id_post**
-> String lists_contacts_by_list_id_post(contact, list_id, opts)
+> String lists_contacts_by_list_id_post(contact, list_id)
 
 Create new contact
 
@@ -267,14 +267,10 @@ contact = ClickSendClient::Contact.new # Contact | Contact model
 
 list_id = 56 # Integer | List id
 
-opts = { 
-  page: 1, # Integer | Page number
-  limit: 10 # Integer | Number of records per page
-}
 
 begin
   #Create new contact
-  result = api_instance.lists_contacts_by_list_id_post(contact, list_id, opts)
+  result = api_instance.lists_contacts_by_list_id_post(contact, list_id)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactApi->lists_contacts_by_list_id_post: #{e}"
@@ -287,8 +283,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **list_id** | **Integer**| List id | 
- **page** | **Integer**| Page number | [optional] [default to 1]
- **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

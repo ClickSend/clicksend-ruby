@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 
 # **sms_delivery_receipt_automations_get**
-> String sms_delivery_receipt_automations_get(opts)
+> String sms_delivery_receipt_automations_get(q, opts)
 
 Get all sms delivery receipt automations
 
@@ -246,6 +246,8 @@ end
 
 api_instance = ClickSendClient::SMSDeliveryReceiptRulesApi.new
 
+q = 'q_example' # String | Your keyword or query.
+
 opts = { 
   page: 1, # Integer | Page number
   limit: 10 # Integer | Number of records per page
@@ -253,7 +255,7 @@ opts = {
 
 begin
   #Get all sms delivery receipt automations
-  result = api_instance.sms_delivery_receipt_automations_get(opts)
+  result = api_instance.sms_delivery_receipt_automations_get(q, opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling SMSDeliveryReceiptRulesApi->sms_delivery_receipt_automations_get: #{e}"
@@ -264,6 +266,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. | 
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

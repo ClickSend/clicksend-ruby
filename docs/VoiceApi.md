@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 
 # **voice_receipts_get**
-> String voice_receipts_get(opts)
+> String voice_receipts_get(q, opts)
 
 Get all voice receipts
 
@@ -347,6 +347,8 @@ end
 
 api_instance = ClickSendClient::VoiceApi.new
 
+q = 'q_example' # String | Your keyword or query.
+
 opts = { 
   page: 1, # Integer | Page number
   limit: 10 # Integer | Number of records per page
@@ -354,7 +356,7 @@ opts = {
 
 begin
   #Get all voice receipts
-  result = api_instance.voice_receipts_get(opts)
+  result = api_instance.voice_receipts_get(q, opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling VoiceApi->voice_receipts_get: #{e}"
@@ -365,6 +367,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. | 
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
