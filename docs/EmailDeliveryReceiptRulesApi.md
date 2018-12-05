@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 
 # **email_delivery_receipt_automations_get**
-> String email_delivery_receipt_automations_get(q, opts)
+> String email_delivery_receipt_automations_get(opts)
 
 Get all email delivery receipt automations
 
@@ -246,16 +246,15 @@ end
 
 api_instance = ClickSendClient::EmailDeliveryReceiptRulesApi.new
 
-q = 'q_example' # String | Your keyword or query.
-
 opts = { 
+  q: 'q_example', # String | Your keyword or query.
   page: 1, # Integer | Page number
   limit: 10 # Integer | Number of records per page
 }
 
 begin
   #Get all email delivery receipt automations
-  result = api_instance.email_delivery_receipt_automations_get(q, opts)
+  result = api_instance.email_delivery_receipt_automations_get(opts)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling EmailDeliveryReceiptRulesApi->email_delivery_receipt_automations_get: #{e}"
@@ -266,7 +265,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **String**| Your keyword or query. | 
+ **q** | **String**| Your keyword or query. | [optional] 
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
