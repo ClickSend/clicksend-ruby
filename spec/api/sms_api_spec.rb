@@ -71,6 +71,7 @@ describe 'SMSApi' do
   # Get all sms history
   # Get all sms history
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :q Custom query Example: from:{number},status_code:201.
   # @option opts [Integer] :date_from Start date
   # @option opts [Integer] :date_to End date
   # @option opts [Integer] :page Page number

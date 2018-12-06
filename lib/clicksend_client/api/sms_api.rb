@@ -179,6 +179,7 @@ module ClickSendClient
     # Get all sms history
     # Get all sms history
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :q Custom query Example: from:{number},status_code:201.
     # @option opts [Integer] :date_from Start date
     # @option opts [Integer] :date_to End date
     # @option opts [Integer] :page Page number (default to 1)
@@ -192,6 +193,7 @@ module ClickSendClient
     # Get all sms history
     # Get all sms history
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :q Custom query Example: from:{number},status_code:201.
     # @option opts [Integer] :date_from Start date
     # @option opts [Integer] :date_to End date
     # @option opts [Integer] :page Page number
@@ -214,6 +216,7 @@ module ClickSendClient
 
       # query parameters
       query_params = {}
+      query_params[:'q'] = opts[:'q'] if !opts[:'q'].nil?
       query_params[:'date_from'] = opts[:'date_from'] if !opts[:'date_from'].nil?
       query_params[:'date_to'] = opts[:'date_to'] if !opts[:'date_to'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?

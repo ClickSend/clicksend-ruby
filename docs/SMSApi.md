@@ -198,6 +198,7 @@ end
 api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
+  q: 'q_example', # String | Custom query Example: from:{number},status_code:201.
   date_from: 56, # Integer | Start date
   date_to: 56, # Integer | End date
   page: 1, # Integer | Page number
@@ -217,6 +218,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Custom query Example: from:{number},status_code:201. | [optional] 
  **date_from** | **Integer**| Start date | [optional] 
  **date_to** | **Integer**| End date | [optional] 
  **page** | **Integer**| Page number | [optional] [default to 1]
