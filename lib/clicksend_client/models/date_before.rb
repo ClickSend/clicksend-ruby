@@ -28,7 +28,7 @@ module ClickSendClient
     # Attribute type mapping.
     def self.clicksend_types
       {
-        :'date_before' => :'String'
+        :'date_before' => :'Float'
       }
     end
 
