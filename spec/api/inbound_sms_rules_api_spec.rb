@@ -85,6 +85,7 @@ describe 'InboundSMSRulesApi' do
   # Get all inbound sms automations
   # Get all inbound sms automations
   # @param [Hash] opts the optional parameters
+  # @option opts [String] :q Your keyword or query.
   # @option opts [Integer] :page Page number
   # @option opts [Integer] :limit Number of records per page
   # @return [String]

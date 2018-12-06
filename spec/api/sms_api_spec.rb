@@ -108,11 +108,23 @@ describe 'SMSApi' do
     end
   end
 
+  # unit tests for sms_inbound_read_by_message_id_put
+  # Mark inbound SMS as read
+  # Mark specific inbound SMS as read
+  # @param message_id Message ID
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'sms_inbound_read_by_message_id_put test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sms_inbound_read_put
   # Mark inbound SMS as read
   # Mark all inbound SMS as read optionally before a certain date
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+  # @option opts [Float] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
   # @return [String]
   describe 'sms_inbound_read_put test' do
     it 'should work' do
@@ -148,7 +160,6 @@ describe 'SMSApi' do
   # Get all delivery receipts
   # Get all delivery receipts
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :q Your keyword or query.
   # @option opts [Integer] :page Page number
   # @option opts [Integer] :limit Number of records per page
   # @return [String]
@@ -174,7 +185,7 @@ describe 'SMSApi' do
   # Mark delivery receipts as read
   # Mark delivery receipts as read
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :date_before Mark all as read before this timestamp
+  # @option opts [Float] :date_before Mark all as read before this timestamp
   # @return [String]
   describe 'sms_receipts_read_put test' do
     it 'should work' do

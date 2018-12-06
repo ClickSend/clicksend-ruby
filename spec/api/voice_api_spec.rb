@@ -109,7 +109,6 @@ describe 'VoiceApi' do
   # Get all voice receipts
   # Get all voice receipts
   # @param [Hash] opts the optional parameters
-  # @option opts [String] :q Your keyword or query.
   # @option opts [Integer] :page Page number
   # @option opts [Integer] :limit Number of records per page
   # @return [String]

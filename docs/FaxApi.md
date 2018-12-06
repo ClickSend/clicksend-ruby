@@ -202,7 +202,6 @@ end
 api_instance = ClickSendClient::FaxApi.new
 
 opts = { 
-  q: 'q_example', # String | Your keyword or query.
   page: 1, # Integer | Page number
   limit: 10 # Integer | Number of records per page
 }
@@ -220,7 +219,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **String**| Your keyword or query. | [optional] 
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**sms_history_get**](SMSApi.md#sms_history_get) | **GET** /sms/history | Get all sms history
 [**sms_inbound_get**](SMSApi.md#sms_inbound_get) | **GET** /sms/inbound | Get all inbound sms
 [**sms_inbound_post**](SMSApi.md#sms_inbound_post) | **POST** /sms/inbound | Create inbound sms
+[**sms_inbound_read_by_message_id_put**](SMSApi.md#sms_inbound_read_by_message_id_put) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**sms_inbound_read_put**](SMSApi.md#sms_inbound_read_put) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**sms_price_post**](SMSApi.md#sms_price_post) | **POST** /sms/price | Calculate sms price
 [**sms_receipts_by_message_id_get**](SMSApi.md#sms_receipts_by_message_id_get) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
@@ -347,6 +348,59 @@ Name | Type | Description  | Notes
 
 
 
+# **sms_inbound_read_by_message_id_put**
+> String sms_inbound_read_by_message_id_put(message_id)
+
+Mark inbound SMS as read
+
+Mark specific inbound SMS as read
+
+### Example
+```ruby
+# load the gem
+require 'clicksend_client'
+# setup authorization
+ClickSendClient.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = ClickSendClient::SMSApi.new
+
+message_id = 'message_id_example' # String | Message ID
+
+
+begin
+  #Mark inbound SMS as read
+  result = api_instance.sms_inbound_read_by_message_id_put(message_id)
+  p result
+rescue ClickSendClient::ApiError => e
+  puts "Exception when calling SMSApi->sms_inbound_read_by_message_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **message_id** | **String**| Message ID | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **sms_inbound_read_put**
 > String sms_inbound_read_put(opts)
 
@@ -368,7 +422,7 @@ end
 api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
-  date_before: 'date_before_example' # String | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+  date_before: 8.14 # Float | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
 }
 
 begin
@@ -384,7 +438,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **String**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **date_before** | **Float**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
 
 ### Return type
 
@@ -528,7 +582,6 @@ end
 api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
-  q: 'q_example', # String | Your keyword or query.
   page: 1, # Integer | Page number
   limit: 10 # Integer | Number of records per page
 }
@@ -546,7 +599,6 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **String**| Your keyword or query. | [optional] 
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
@@ -639,7 +691,7 @@ end
 api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
-  date_before: 'date_before_example' # String | Mark all as read before this timestamp
+  date_before: 8.14 # Float | Mark all as read before this timestamp
 }
 
 begin
@@ -655,7 +707,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **String**| Mark all as read before this timestamp | [optional] 
+ **date_before** | **Float**| Mark all as read before this timestamp | [optional] 
 
 ### Return type
 

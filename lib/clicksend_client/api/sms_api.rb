@@ -364,9 +364,63 @@ module ClickSendClient
       return data, status_code, headers
     end
     # Mark inbound SMS as read
+    # Mark specific inbound SMS as read
+    # @param message_id Message ID
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def sms_inbound_read_by_message_id_put(message_id, opts = {})
+      data, _status_code, _headers = sms_inbound_read_by_message_id_put_with_http_info(message_id, opts)
+      data
+    end
+
+    # Mark inbound SMS as read
+    # Mark specific inbound SMS as read
+    # @param message_id Message ID
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def sms_inbound_read_by_message_id_put_with_http_info(message_id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SMSApi.sms_inbound_read_by_message_id_put ...'
+      end
+      # verify the required parameter 'message_id' is set
+      if @api_client.config.client_side_validation && message_id.nil?
+        fail ArgumentError, "Missing the required parameter 'message_id' when calling SMSApi.sms_inbound_read_by_message_id_put"
+      end
+      # resource path
+      local_var_path = '/sms/inbound-read/{message_id}'.sub('{' + 'message_id' + '}', message_id.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['BasicAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SMSApi#sms_inbound_read_by_message_id_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Mark inbound SMS as read
     # Mark all inbound SMS as read optionally before a certain date
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+    # @option opts [Float] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
     # @return [String]
     def sms_inbound_read_put(opts = {})
       data, _status_code, _headers = sms_inbound_read_put_with_http_info(opts)
@@ -376,7 +430,7 @@ module ClickSendClient
     # Mark inbound SMS as read
     # Mark all inbound SMS as read optionally before a certain date
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+    # @option opts [Float] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def sms_inbound_read_put_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -524,7 +578,6 @@ module ClickSendClient
     # Get all delivery receipts
     # Get all delivery receipts
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :q Your keyword or query.
     # @option opts [Integer] :page Page number (default to 1)
     # @option opts [Integer] :limit Number of records per page (default to 10)
     # @return [String]
@@ -536,7 +589,6 @@ module ClickSendClient
     # Get all delivery receipts
     # Get all delivery receipts
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :q Your keyword or query.
     # @option opts [Integer] :page Page number
     # @option opts [Integer] :limit Number of records per page
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -557,7 +609,6 @@ module ClickSendClient
 
       # query parameters
       query_params = {}
-      query_params[:'q'] = opts[:'q'] if !opts[:'q'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
@@ -643,7 +694,7 @@ module ClickSendClient
     # Mark delivery receipts as read
     # Mark delivery receipts as read
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :date_before Mark all as read before this timestamp
+    # @option opts [Float] :date_before Mark all as read before this timestamp
     # @return [String]
     def sms_receipts_read_put(opts = {})
       data, _status_code, _headers = sms_receipts_read_put_with_http_info(opts)
@@ -653,7 +704,7 @@ module ClickSendClient
     # Mark delivery receipts as read
     # Mark delivery receipts as read
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :date_before Mark all as read before this timestamp
+    # @option opts [Float] :date_before Mark all as read before this timestamp
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
     def sms_receipts_read_put_with_http_info(opts = {})
       if @api_client.config.debugging

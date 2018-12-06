@@ -244,6 +244,7 @@ module ClickSendClient
     # Get all inbound sms automations
     # Get all inbound sms automations
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :q Your keyword or query.
     # @option opts [Integer] :page Page number (default to 1)
     # @option opts [Integer] :limit Number of records per page (default to 10)
     # @return [String]
@@ -255,6 +256,7 @@ module ClickSendClient
     # Get all inbound sms automations
     # Get all inbound sms automations
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :q Your keyword or query.
     # @option opts [Integer] :page Page number
     # @option opts [Integer] :limit Number of records per page
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
@@ -275,6 +277,7 @@ module ClickSendClient
 
       # query parameters
       query_params = {}
+      query_params[:'q'] = opts[:'q'] if !opts[:'q'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
 
