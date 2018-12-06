@@ -422,7 +422,7 @@ end
 api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
-  date_before: 8.14 # Float | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+  date_before: ClickSendClient::DateBefore.new # DateBefore | DateBefore model
 }
 
 begin
@@ -438,7 +438,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **Float**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional] 
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 
@@ -691,7 +691,7 @@ end
 api_instance = ClickSendClient::SMSApi.new
 
 opts = { 
-  date_before: 8.14 # Float | Mark all as read before this timestamp
+  date_before: ClickSendClient::DateBefore.new # DateBefore | DateBefore model
 }
 
 begin
@@ -707,7 +707,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **date_before** | **Float**| Mark all as read before this timestamp | [optional] 
+ **date_before** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional] 
 
 ### Return type
 

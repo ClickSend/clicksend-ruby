@@ -124,7 +124,7 @@ describe 'SMSApi' do
   # Mark inbound SMS as read
   # Mark all inbound SMS as read optionally before a certain date
   # @param [Hash] opts the optional parameters
-  # @option opts [Float] :date_before An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+  # @option opts [DateBefore] :date_before DateBefore model
   # @return [String]
   describe 'sms_inbound_read_put test' do
     it 'should work' do
@@ -185,7 +185,7 @@ describe 'SMSApi' do
   # Mark delivery receipts as read
   # Mark delivery receipts as read
   # @param [Hash] opts the optional parameters
-  # @option opts [Float] :date_before Mark all as read before this timestamp
+  # @option opts [DateBefore] :date_before DateBefore model
   # @return [String]
   describe 'sms_receipts_read_put test' do
     it 'should work' do
