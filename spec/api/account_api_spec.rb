@@ -55,6 +55,19 @@ describe 'AccountApi' do
     end
   end
 
+  # unit tests for account_useage_by_subaccount_get
+  # Get account useage by subaccount
+  # Get account useage by subaccount
+  # @param year Year to filter by (yyyy)
+  # @param month Month to filter by (mm)
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'account_useage_by_subaccount_get test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for account_verify_send_put
   # Send account activation token
   # Send account activation token

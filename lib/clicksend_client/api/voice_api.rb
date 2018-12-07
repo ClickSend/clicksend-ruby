@@ -346,8 +346,8 @@ module ClickSendClient
       end
       return data, status_code, headers
     end
-    # Get all voice receipts
-    # Get all voice receipts
+    # Get all delivery receipts
+    # Get all delivery receipts
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page Page number (default to 1)
     # @option opts [Integer] :limit Number of records per page (default to 10)
@@ -357,8 +357,8 @@ module ClickSendClient
       data
     end
 
-    # Get all voice receipts
-    # Get all voice receipts
+    # Get all delivery receipts
+    # Get all delivery receipts
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page Page number
     # @option opts [Integer] :limit Number of records per page
@@ -405,6 +405,110 @@ module ClickSendClient
         :return_type => 'String')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: VoiceApi#voice_receipts_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Add a delivery receipt
+    # Add a delivery receipt
+    # @param url Url model
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def voice_receipts_post(url, opts = {})
+      data, _status_code, _headers = voice_receipts_post_with_http_info(url, opts)
+      data
+    end
+
+    # Add a delivery receipt
+    # Add a delivery receipt
+    # @param url Url model
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def voice_receipts_post_with_http_info(url, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: VoiceApi.voice_receipts_post ...'
+      end
+      # verify the required parameter 'url' is set
+      if @api_client.config.client_side_validation && url.nil?
+        fail ArgumentError, "Missing the required parameter 'url' when calling VoiceApi.voice_receipts_post"
+      end
+      # resource path
+      local_var_path = '/voice/receipts'
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(url)
+      auth_names = ['BasicAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: VoiceApi#voice_receipts_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Mark delivery receipts as read
+    # Mark delivery receipts as read
+    # @param [Hash] opts the optional parameters
+    # @option opts [DateBefore] :date_before DateBefore model
+    # @return [String]
+    def voice_receipts_read_put(opts = {})
+      data, _status_code, _headers = voice_receipts_read_put_with_http_info(opts)
+      data
+    end
+
+    # Mark delivery receipts as read
+    # Mark delivery receipts as read
+    # @param [Hash] opts the optional parameters
+    # @option opts [DateBefore] :date_before DateBefore model
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def voice_receipts_read_put_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: VoiceApi.voice_receipts_read_put ...'
+      end
+      # resource path
+      local_var_path = '/voice/receipts-read'
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(opts[:'date_before'])
+      auth_names = ['BasicAuth']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: VoiceApi#voice_receipts_read_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

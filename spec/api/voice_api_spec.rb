@@ -106,13 +106,37 @@ describe 'VoiceApi' do
   end
 
   # unit tests for voice_receipts_get
-  # Get all voice receipts
-  # Get all voice receipts
+  # Get all delivery receipts
+  # Get all delivery receipts
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page Page number
   # @option opts [Integer] :limit Number of records per page
   # @return [String]
   describe 'voice_receipts_get test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for voice_receipts_post
+  # Add a delivery receipt
+  # Add a delivery receipt
+  # @param url Url model
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'voice_receipts_post test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for voice_receipts_read_put
+  # Mark delivery receipts as read
+  # Mark delivery receipts as read
+  # @param [Hash] opts the optional parameters
+  # @option opts [DateBefore] :date_before DateBefore model
+  # @return [String]
+  describe 'voice_receipts_read_put test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

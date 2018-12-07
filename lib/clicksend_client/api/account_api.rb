@@ -121,6 +121,66 @@ module ClickSendClient
       end
       return data, status_code, headers
     end
+    # Get account useage by subaccount
+    # Get account useage by subaccount
+    # @param year Year to filter by (yyyy)
+    # @param month Month to filter by (mm)
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def account_useage_by_subaccount_get(year, month, opts = {})
+      data, _status_code, _headers = account_useage_by_subaccount_get_with_http_info(year, month, opts)
+      data
+    end
+
+    # Get account useage by subaccount
+    # Get account useage by subaccount
+    # @param year Year to filter by (yyyy)
+    # @param month Month to filter by (mm)
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def account_useage_by_subaccount_get_with_http_info(year, month, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: AccountApi.account_useage_by_subaccount_get ...'
+      end
+      # verify the required parameter 'year' is set
+      if @api_client.config.client_side_validation && year.nil?
+        fail ArgumentError, "Missing the required parameter 'year' when calling AccountApi.account_useage_by_subaccount_get"
+      end
+      # verify the required parameter 'month' is set
+      if @api_client.config.client_side_validation && month.nil?
+        fail ArgumentError, "Missing the required parameter 'month' when calling AccountApi.account_useage_by_subaccount_get"
+      end
+      # resource path
+      local_var_path = '/account/usage/{year}/{month}/subaccount'.sub('{' + 'year' + '}', year.to_s).sub('{' + 'month' + '}', month.to_s)
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['BasicAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AccountApi#account_useage_by_subaccount_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Send account activation token
     # Send account activation token
     # @param account_verify Account details

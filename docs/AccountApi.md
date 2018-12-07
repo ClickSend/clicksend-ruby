@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**account_get**](AccountApi.md#account_get) | **GET** /account | Get account information
 [**account_post**](AccountApi.md#account_post) | **POST** /account | Create a new account
+[**account_useage_by_subaccount_get**](AccountApi.md#account_useage_by_subaccount_get) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
 [**account_verify_send_put**](AccountApi.md#account_verify_send_put) | **PUT** /account-verify/send | Send account activation token
 [**account_verify_verify_by_activation_token_put**](AccountApi.md#account_verify_verify_by_activation_token_put) | **PUT** /account-verify/verify/{activation_token} | Verify new account
 [**forgot_password_put**](AccountApi.md#forgot_password_put) | **PUT** /forgot-password | Forgot password
@@ -97,6 +98,62 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account** | [**Account**](Account.md)| Account model | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **account_useage_by_subaccount_get**
+> String account_useage_by_subaccount_get(year, month)
+
+Get account useage by subaccount
+
+Get account useage by subaccount
+
+### Example
+```ruby
+# load the gem
+require 'clicksend_client'
+# setup authorization
+ClickSendClient.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = ClickSendClient::AccountApi.new
+
+year = 56 # Integer | Year to filter by (yyyy)
+
+month = 56 # Integer | Month to filter by (mm)
+
+
+begin
+  #Get account useage by subaccount
+  result = api_instance.account_useage_by_subaccount_get(year, month)
+  p result
+rescue ClickSendClient::ApiError => e
+  puts "Exception when calling AccountApi->account_useage_by_subaccount_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **Integer**| Year to filter by (yyyy) | 
+ **month** | **Integer**| Month to filter by (mm) | 
 
 ### Return type
 
