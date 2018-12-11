@@ -1,4 +1,4 @@
-# ClickSendClient::InboundFAXRule
+# ClickSendClient::InboundFaxRule
 
 ## Properties
 Name | Type | Description | Notes

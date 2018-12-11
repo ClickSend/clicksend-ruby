@@ -137,7 +137,7 @@ end
 
 api_instance = ClickSendClient::InboundFAXRulesApi.new
 
-inbound_fax_rule = ClickSendClient::InboundFAXRule.new # InboundFAXRule | Inbound fax rule model
+inbound_fax_rule = ClickSendClient::InboundFaxRule.new # InboundFaxRule | Inbound fax rule model
 
 
 begin
@@ -153,7 +153,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inbound_fax_rule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inbound_fax_rule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 
@@ -192,7 +192,7 @@ api_instance = ClickSendClient::InboundFAXRulesApi.new
 
 inbound_rule_id = 56 # Integer | Inbound rule id
 
-inbound_fax_rule = ClickSendClient::InboundFAXRule.new # InboundFAXRule | Inbound fax rule model
+inbound_fax_rule = ClickSendClient::InboundFaxRule.new # InboundFaxRule | Inbound fax rule model
 
 
 begin
@@ -209,7 +209,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inbound_rule_id** | **Integer**| Inbound rule id | 
- **inbound_fax_rule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model | 
+ **inbound_fax_rule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model | 
 
 ### Return type
 

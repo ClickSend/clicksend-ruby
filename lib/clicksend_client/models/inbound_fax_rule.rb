@@ -14,7 +14,7 @@ require 'date'
 
 module ClickSendClient
   # Model for Inbound FAX Rules
-  class InboundFAXRule
+  class InboundFaxRule
     # Dedicated Number. Can be '*' to apply to all numbers.
     attr_accessor :dedicated_number
 
