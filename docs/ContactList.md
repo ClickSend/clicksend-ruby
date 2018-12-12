@@ -1,4 +1,4 @@
-# ClickSendClient::List
+# ClickSendClient::ContactList
 
 ## Properties
 Name | Type | Description | Notes

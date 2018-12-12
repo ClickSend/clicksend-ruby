@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 
 # **lists_by_list_id_put**
-> String lists_by_list_id_put(list_id, list)
+> String lists_by_list_id_put(list_id, contact_list)
 
 Update specific contact list
 
@@ -141,12 +141,12 @@ api_instance = ClickSendClient::ContactListApi.new
 
 list_id = 56 # Integer | Your list id
 
-list = nil # Array | List model
+contact_list = ClickSendClient::ContactList.new # ContactList | Contact list model
 
 
 begin
   #Update specific contact list
-  result = api_instance.lists_by_list_id_put(list_id, list)
+  result = api_instance.lists_by_list_id_put(list_id, contact_list)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactListApi->lists_by_list_id_put: #{e}"
@@ -158,7 +158,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list_id** | **Integer**| Your list id | 
- **list** | [**Array**](Array.md)| List model | 
+ **contact_list** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 
 # **lists_post**
-> String lists_post(list)
+> String lists_post(contact_list)
 
 Create new contact list
 
@@ -307,12 +307,12 @@ end
 
 api_instance = ClickSendClient::ContactListApi.new
 
-list = nil # Array | List model
+contact_list = ClickSendClient::ContactList.new # ContactList | Contact list model
 
 
 begin
   #Create new contact list
-  result = api_instance.lists_post(list)
+  result = api_instance.lists_post(contact_list)
   p result
 rescue ClickSendClient::ApiError => e
   puts "Exception when calling ContactListApi->lists_post: #{e}"
@@ -323,7 +323,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | [**Array**](Array.md)| List model | 
+ **contact_list** | [**ContactList**](ContactList.md)| Contact list model | 
 
 ### Return type
 

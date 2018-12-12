@@ -13,8 +13,8 @@ ClickSend Codegen version: 2.4.1-SNAPSHOT
 require 'date'
 
 module ClickSendClient
-  # Your list.
-  class List
+  # Your contact list.
+  class ContactList
     # Your list name.
     attr_accessor :list_name
 
