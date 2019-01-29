@@ -73,7 +73,7 @@ end
 
 ## Documentation
 
-Documentation for our SDK and REST API can be found [here](https://developers.clicksend.com/docs/rest/v3/?swift#introduction).
+Documentation for our SDK and REST API can be found [here](https://developers.clicksend.com/docs/rest/v3/?ruby#introduction).
 
 ## Documentation for Authorization
 
