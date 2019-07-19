@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**to** | **String** | Recipient phone number in E.164 format | 
+**to** | **String** | Recipient phone number in E.164 format | [optional] 
 **body** | **String** | Your message | 
 **subject** | **String** | Subject line (max 20 characters) | 
 **from** | **String** | Your sender ID | [optional] 
