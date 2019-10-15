@@ -145,18 +145,6 @@ describe 'SMSApi' do
     end
   end
 
-  # unit tests for sms_receipt_read_by_message_id_put
-  # Mark specific delivery receipt as read
-  # Mark specific delivery receipt as read
-  # @param message_id The message ID you want to mark as read
-  # @param [Hash] opts the optional parameters
-  # @return [String]
-  describe 'sms_receipt_read_by_message_id_put test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for sms_receipts_by_message_id_get
   # Get a Specific Delivery Receipt
   # Get a Specific Delivery Receipt
