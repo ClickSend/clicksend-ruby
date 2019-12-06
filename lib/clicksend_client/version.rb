@@ -11,5 +11,5 @@ ClickSend Codegen version: 2.4.11-SNAPSHOT
 =end
 
 module ClickSendClient
-  VERSION = '5.0.53'
+  VERSION = '5.0.54'
 end
