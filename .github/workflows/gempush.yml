@@ -19,13 +19,11 @@ jobs:
 
     - name: Publish to Github
       run: |
-        ls
-        ls ..
         mkdir -p $HOME/.gem
         touch $HOME/.gem/credentials
         chmod 0600 $HOME/.gem/credentials
         printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
-        chmod -R go-w ../opt/
+        chmod -R go-w /
         gem build *.gemspec
         gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} *.gem
       env:
