@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**lists_contacts_by_list_id_and_contact_id_put**](ContactApi.md#lists_contacts_by_list_id_and_contact_id_put) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
 [**lists_contacts_by_list_id_get**](ContactApi.md#lists_contacts_by_list_id_get) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
 [**lists_contacts_by_list_id_post**](ContactApi.md#lists_contacts_by_list_id_post) | **POST** /lists/{list_id}/contacts | Create new contact
+[**lists_copy_contact_put**](ContactApi.md#lists_copy_contact_put) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
 [**lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put**](ContactApi.md#lists_remove_opted_out_contacts_by_list_id_and_opt_out_list_id_put) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**lists_transfer_contact_put**](ContactApi.md#lists_transfer_contact_put) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
@@ -283,6 +284,65 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model | 
  **list_id** | **Integer**| List id | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **lists_copy_contact_put**
+> String lists_copy_contact_put(from_list_id, contact_id, to_list_id)
+
+Copy contact to another list
+
+Copy contact to another list
+
+### Example
+```ruby
+# load the gem
+require 'clicksend_client'
+# setup authorization
+ClickSendClient.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = ClickSendClient::ContactApi.new
+
+from_list_id = 56 # Integer | List ID for list that contains contact.
+
+contact_id = 56 # Integer | Contact ID
+
+to_list_id = 56 # Integer | List ID for list you want to copy the contact to.
+
+
+begin
+  #Copy contact to another list
+  result = api_instance.lists_copy_contact_put(from_list_id, contact_id, to_list_id)
+  p result
+rescue ClickSendClient::ApiError => e
+  puts "Exception when calling ContactApi->lists_copy_contact_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from_list_id** | **Integer**| List ID for list that contains contact. | 
+ **contact_id** | **Integer**| Contact ID | 
+ **to_list_id** | **Integer**| List ID for list you want to copy the contact to. | 
 
 ### Return type
 
