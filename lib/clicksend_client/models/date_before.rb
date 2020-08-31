@@ -13,7 +13,7 @@ ClickSend Codegen version: 2.4.16-SNAPSHOT
 require 'date'
 
 module ClickSendClient
-  # All dates before specified timestam.
+  # All dates before specified timestamp.
   class DateBefore
     # An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
     attr_accessor :date_before

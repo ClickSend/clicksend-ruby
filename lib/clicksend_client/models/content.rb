@@ -14,7 +14,7 @@ require 'date'
 
 module ClickSendClient
   # Your file to be uploaded.
-  class UploadFile
+  class Content
     # Your base64 encoded file string.
     attr_accessor :content
 

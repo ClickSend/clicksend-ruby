@@ -35,7 +35,7 @@ describe 'UploadApi' do
   # unit tests for uploads_post
   # Upload File
   # Upload File
-  # @param upload_file Your file to be uploaded
+  # @param content Your file to be uploaded
   # @param convert 
   # @param [Hash] opts the optional parameters
   # @return [String]

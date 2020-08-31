@@ -35,7 +35,7 @@ describe 'DetectAddressApi' do
   # unit tests for detect_address_post
   # Detects address in uploaded file.
   # Detects address in uploaded file.
-  # @param upload_file Your file to be uploaded
+  # @param content Your file to be uploaded
   # @param [Hash] opts the optional parameters
   # @return [String]
   describe 'detect_address_post test' do

@@ -21,28 +21,28 @@ module ClickSendClient
     end
     # Upload File
     # Upload File
-    # @param upload_file Your file to be uploaded
+    # @param content Your file to be uploaded
     # @param convert 
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def uploads_post(upload_file, convert, opts = {})
-      data, _status_code, _headers = uploads_post_with_http_info(upload_file, convert, opts)
+    def uploads_post(content, convert, opts = {})
+      data, _status_code, _headers = uploads_post_with_http_info(content, convert, opts)
       data
     end
 
     # Upload File
     # Upload File
-    # @param upload_file Your file to be uploaded
+    # @param content Your file to be uploaded
     # @param convert 
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def uploads_post_with_http_info(upload_file, convert, opts = {})
+    def uploads_post_with_http_info(content, convert, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UploadApi.uploads_post ...'
       end
-      # verify the required parameter 'upload_file' is set
-      if @api_client.config.client_side_validation && upload_file.nil?
-        fail ArgumentError, "Missing the required parameter 'upload_file' when calling UploadApi.uploads_post"
+      # verify the required parameter 'content' is set
+      if @api_client.config.client_side_validation && content.nil?
+        fail ArgumentError, "Missing the required parameter 'content' when calling UploadApi.uploads_post"
       end
       # verify the required parameter 'convert' is set
       if @api_client.config.client_side_validation && convert.nil?
@@ -66,7 +66,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(upload_file)
+      post_body = @api_client.object_to_http_body(content)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,
