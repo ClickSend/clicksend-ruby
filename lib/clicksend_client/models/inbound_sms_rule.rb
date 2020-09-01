@@ -36,6 +36,9 @@ module ClickSendClient
     # Enabled: Disabled=0 or Enabled=1.
     attr_accessor :enabled
 
+    # post, get, or json. post by default
+    attr_accessor :webhook_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -45,7 +48,8 @@ module ClickSendClient
         :'message_search_term' => :'message_search_term',
         :'action' => :'action',
         :'action_address' => :'action_address',
-        :'enabled' => :'enabled'
+        :'enabled' => :'enabled',
+        :'webhook_type' => :'webhook_type'
       }
     end
 
@@ -58,7 +62,8 @@ module ClickSendClient
         :'message_search_term' => :'String',
         :'action' => :'String',
         :'action_address' => :'String',
-        :'enabled' => :'Float'
+        :'enabled' => :'Float',
+        :'webhook_type' => :'String'
       }
     end
 
@@ -96,6 +101,10 @@ module ClickSendClient
 
       if attributes.has_key?(:'enabled')
         self.enabled = attributes[:'enabled']
+      end
+
+      if attributes.has_key?(:'webhook_type')
+        self.webhook_type = attributes[:'webhook_type']
       end
     end
 
@@ -158,7 +167,8 @@ module ClickSendClient
           message_search_term == o.message_search_term &&
           action == o.action &&
           action_address == o.action_address &&
-          enabled == o.enabled
+          enabled == o.enabled &&
+          webhook_type == o.webhook_type
     end
 
     # @see the `==` method
@@ -170,7 +180,7 @@ module ClickSendClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [dedicated_number, rule_name, message_search_type, message_search_term, action, action_address, enabled].hash
+      [dedicated_number, rule_name, message_search_type, message_search_term, action, action_address, enabled, webhook_type].hash
     end
 
     # Builds the object from hash
