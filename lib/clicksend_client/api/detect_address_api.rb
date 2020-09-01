@@ -21,26 +21,26 @@ module ClickSendClient
     end
     # Detects address in uploaded file.
     # Detects address in uploaded file.
-    # @param content Your file to be uploaded
+    # @param upload_file Your file to be uploaded
     # @param [Hash] opts the optional parameters
     # @return [String]
-    def detect_address_post(content, opts = {})
-      data, _status_code, _headers = detect_address_post_with_http_info(content, opts)
+    def detect_address_post(upload_file, opts = {})
+      data, _status_code, _headers = detect_address_post_with_http_info(upload_file, opts)
       data
     end
 
     # Detects address in uploaded file.
     # Detects address in uploaded file.
-    # @param content Your file to be uploaded
+    # @param upload_file Your file to be uploaded
     # @param [Hash] opts the optional parameters
     # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
-    def detect_address_post_with_http_info(content, opts = {})
+    def detect_address_post_with_http_info(upload_file, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: DetectAddressApi.detect_address_post ...'
       end
-      # verify the required parameter 'content' is set
-      if @api_client.config.client_side_validation && content.nil?
-        fail ArgumentError, "Missing the required parameter 'content' when calling DetectAddressApi.detect_address_post"
+      # verify the required parameter 'upload_file' is set
+      if @api_client.config.client_side_validation && upload_file.nil?
+        fail ArgumentError, "Missing the required parameter 'upload_file' when calling DetectAddressApi.detect_address_post"
       end
       # resource path
       local_var_path = '/post/letters/detect-address'
@@ -59,7 +59,7 @@ module ClickSendClient
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(content)
+      post_body = @api_client.object_to_http_body(upload_file)
       auth_names = ['BasicAuth']
       data, status_code, headers = @api_client.call_api(:POST, local_var_path,
         :header_params => header_params,

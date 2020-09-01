@@ -1,4 +1,4 @@
-# ClickSendClient::Content
+# ClickSendClient::UploadFile
 
 ## Properties
 Name | Type | Description | Notes
