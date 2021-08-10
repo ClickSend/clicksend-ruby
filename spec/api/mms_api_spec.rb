@@ -32,6 +32,34 @@ describe 'MMSApi' do
     end
   end
 
+  # unit tests for mms_history_export_get
+  # Export all mms history
+  # Export all mms history
+  # @param filename Filename to download history as
+  # @param [Hash] opts the optional parameters
+  # @return [String]
+  describe 'mms_history_export_get test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for mms_history_get
+  # Get all mms history
+  # Get all mms history
+  # @param [Hash] opts the optional parameters
+  # @option opts [String] :q Custom query Example: from:{number},status_code:201.
+  # @option opts [Integer] :date_from Start date
+  # @option opts [Integer] :date_to End date
+  # @option opts [Integer] :page Page number
+  # @option opts [Integer] :limit Number of records per page
+  # @return [String]
+  describe 'mms_history_get test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for mms_price_post
   # Get Price for MMS sent
   # Get Price for MMS sent

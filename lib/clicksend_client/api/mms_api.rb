@@ -19,6 +19,132 @@ module ClickSendClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Export all mms history
+    # Export all mms history
+    # @param filename Filename to download history as
+    # @param [Hash] opts the optional parameters
+    # @return [String]
+    def mms_history_export_get(filename, opts = {})
+      data, _status_code, _headers = mms_history_export_get_with_http_info(filename, opts)
+      data
+    end
+
+    # Export all mms history
+    # Export all mms history
+    # @param filename Filename to download history as
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def mms_history_export_get_with_http_info(filename, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: MMSApi.mms_history_export_get ...'
+      end
+      # verify the required parameter 'filename' is set
+      if @api_client.config.client_side_validation && filename.nil?
+        fail ArgumentError, "Missing the required parameter 'filename' when calling MMSApi.mms_history_export_get"
+      end
+      # resource path
+      local_var_path = '/mms/history/export'
+
+      # query parameters
+      query_params = {}
+      query_params[:'filename'] = filename
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['BasicAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: MMSApi#mms_history_export_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+    # Get all mms history
+    # Get all mms history
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :q Custom query Example: from:{number},status_code:201.
+    # @option opts [Integer] :date_from Start date
+    # @option opts [Integer] :date_to End date
+    # @option opts [Integer] :page Page number (default to 1)
+    # @option opts [Integer] :limit Number of records per page (default to 10)
+    # @return [String]
+    def mms_history_get(opts = {})
+      data, _status_code, _headers = mms_history_get_with_http_info(opts)
+      data
+    end
+
+    # Get all mms history
+    # Get all mms history
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :q Custom query Example: from:{number},status_code:201.
+    # @option opts [Integer] :date_from Start date
+    # @option opts [Integer] :date_to End date
+    # @option opts [Integer] :page Page number
+    # @option opts [Integer] :limit Number of records per page
+    # @return [Array<(String, Fixnum, Hash)>] String data, response status code and response headers
+    def mms_history_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: MMSApi.mms_history_get ...'
+      end
+      if @api_client.config.client_side_validation && !opts[:'page'].nil? && opts[:'page'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"page"]" when calling MMSApi.mms_history_get, must be greater than or equal to 1.'
+      end
+
+      if @api_client.config.client_side_validation && !opts[:'limit'].nil? && opts[:'limit'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"limit"]" when calling MMSApi.mms_history_get, must be greater than or equal to 1.'
+      end
+
+      # resource path
+      local_var_path = '/mms/history'
+
+      # query parameters
+      query_params = {}
+      query_params[:'q'] = opts[:'q'] if !opts[:'q'].nil?
+      query_params[:'date_from'] = opts[:'date_from'] if !opts[:'date_from'].nil?
+      query_params[:'date_to'] = opts[:'date_to'] if !opts[:'date_to'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['BasicAuth']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'String')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: MMSApi#mms_history_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Get Price for MMS sent
     # Get Price for MMS sent
     # @param mms_messages MmsMessageCollection model
