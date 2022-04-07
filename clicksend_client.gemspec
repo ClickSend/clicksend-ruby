@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["ClickSend-Codegen"]
   s.email       = ["support@clicksend.com"]
-  s.homepage    = "https://github.com/clicksend-api/clicksend-codegen"
+  s.homepage    = "https://github.com/ClickSend/clicksend-ruby"
   s.summary     = "ClickSend v3 API Ruby Gem"
   s.description = " This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* "
   s.license     = "Unlicense"
