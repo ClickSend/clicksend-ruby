@@ -209,7 +209,8 @@ list_id = 56 # Integer | Contact list ID
 
 opts = { 
   page: 1, # Integer | Page number
-  limit: 10 # Integer | Number of records per page
+  limit: 10, # Integer | Number of records per page
+  updated_after: 10 # Integer | Get all contacts updated after a given timestamp.
 }
 
 begin
@@ -228,6 +229,7 @@ Name | Type | Description  | Notes
  **list_id** | **Integer**| Contact list ID | 
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
+ **updated_after** | **Integer**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 
