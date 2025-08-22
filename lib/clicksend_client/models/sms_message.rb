@@ -15,7 +15,7 @@ require 'date'
 module ClickSendClient
   # SmsMessage model
   class SmsMessage
-    # Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+    # Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
     attr_accessor :from
 
     # Your message.
@@ -27,7 +27,7 @@ module ClickSendClient
     # Your method of sending e.g. 'wordpress', 'php', 'c#'.
     attr_accessor :source
 
-    # Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+    # Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
     attr_accessor :schedule
 
     # Your reference. Will be passed back with all replies and delivery reports.
