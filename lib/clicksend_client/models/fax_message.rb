@@ -27,7 +27,7 @@ module ClickSendClient
     # Your sender id. Must be a valid fax number.
     attr_accessor :from
 
-    # Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+    # Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
     attr_accessor :schedule
 
     # Your reference. Will be passed back with all replies and delivery reports.

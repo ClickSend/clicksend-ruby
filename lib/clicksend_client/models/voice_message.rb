@@ -39,7 +39,7 @@ module ClickSendClient
     # au (string, required) - See section on available languages.
     attr_accessor :lang
 
-    # Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+    # Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
     attr_accessor :schedule
 
     # Whether you want to receive a keypress from the call recipient

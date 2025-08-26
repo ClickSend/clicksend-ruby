@@ -24,7 +24,7 @@ module ClickSendClient
     # Your campaign message.
     attr_accessor :body
 
-    # Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+    # Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
     attr_accessor :from
 
     # Your schedule timestamp.
