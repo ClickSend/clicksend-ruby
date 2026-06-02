@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.summary     = "ClickSend v3 API Ruby Gem"
   s.description = " This is an official SDK for [ClickSend](https://clicksend.com)  Below you will find a current list of the available methods for clicksend.  *NOTE: You will need to create a free account to use the API. You can register [here](https://dashboard.clicksend.com/#/signup/step1/)..* "
   s.license     = "Unlicense"
-  s.required_ruby_version = ">= 1.9"
+  s.required_ruby_version = ">= 2.7"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
   s.add_runtime_dependency 'json', '~> 2.1', '>= 2.1.0'
